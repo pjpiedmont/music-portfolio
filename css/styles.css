@@ -1,24 +1,82 @@
-.border {
-	border-color: rgb(0, 156, 81) !important;
+:root {
+	--main-bg-color: #000;
+	--main-text-color: #fff;
+	--accent-bg-color: rgb(131, 0, 192);
+	--accent-text-color: #000;
 }
 
-.bg-green {
-	background-color: rgb(0, 156, 81);
+.border,
+.border-top,
+.border-bottom,
+.border-start,
+.border-end {
+	border-color: var(--accent-bg-color) !important;
 }
 
-.bg-green>p,
-.bg-green>h1,
-.bg-green>h4,
-.bg-green>div>span {
-	color: #000 !important;
+.bg-accent {
+	background-color: var(--accent-bg-color);
 }
 
-.bg-black {
-	background-color: #000;
+.bg-accent>p,
+.bg-accent>h1,
+.bg-accent>h4,
+.bg-accent>div>span {
+	color: var(--accent-text-color);
 }
 
-.bg-black>p,
-.bg-black>h1,
-.bg-black>h4 {
-	color: #fff;
+.bg-main {
+	background-color: var(--main-bg-color);
+}
+
+.bg-main>p,
+.bg-main>h1,
+.bg-main>h4 {
+	color: var(--main-text-color);
+}
+
+h1 {
+	font-family: 'Major Mono Display';
+}
+
+.font-monospace {
+	font-family: 'Source Code Pro';
+}
+
+p.lead {
+	font-family: 'Roboto Mono Light';
+}
+
+nav {
+	background-color: var(--main-bg-color);
+	/* border-bottom: 5px solid #000; */
+}
+
+nav>div {
+	width: 100%;
+	border-bottom: 1px solid var(--accent-bg-color);
+}
+
+#nav-title {
+	font-family: 'Major Mono Display';
+	color: var(--accent-bg-color);
+	font-size: 3rem;
+	font-weight: bold;
+	width: 100%;
+}
+
+#nav-title>sup {
+	font-weight: bold;
+}
+
+hr {
+	background-color: var(--accent-text-color);
+	color: var(--accent-text-color);
+	opacity: 1;
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	height: 2px;
+	border: 1px solid var(--accent-text-color);
+	border-radius: 1px;
+	overflow: hidden;
 }

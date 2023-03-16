@@ -6,14 +6,23 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Parker Piedmont | Composer & Producer</title>
+	<link href="assets/images/favicon.ico" rel="icon" type="image/x-icon">
 	<link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
+	<link href="css/fonts.css" rel="stylesheet">
 	<link href="css/styles.css" rel="stylesheet">
 </head>
 
 <body data-bs-theme="dark">
-	<main class="py-lg-5 py-3 font-monospace bg-black">
 
-		<header class="container-fluid">
+	<nav class="navbar sticky-top navbar-expand-lg overflow-hidden p-0">
+		<div class="container-fluid">
+			<div id="nav-title" class="navbar-text text-center">P<sup>2</sup></div>
+		</div>
+	</nav>
+
+	<main class="py-lg-5 py-3 font-monospace bg-main">
+
+		<section class="container-fluid">
 			<div class="container mb-5">
 				<div class="row p-0 rounded-3 overflow-hidden border">
 
@@ -21,26 +30,25 @@
 
 						<div class="container p-0" style="height: 100%">
 							<div class="row p-5 align-items-center" style="height: 100%">
-								<div class="col-lg-8 offset-lg-2 p-0 overflow-hidden border"
-									style="border-radius: 50%">
-									<img src="assets/images/me-square.jpg"
-										alt="Portrait of Parker Piedmont" style="width: 100%">
+								<div class="col-lg-8 offset-lg-2 p-0 overflow-hidden border" style="border-radius: 50%">
+									<img src="assets/images/me-square2.jpg" alt="Portrait of Parker Piedmont" style="width: 100%">
 								</div> <!-- col -->
 							</div> <!-- row -->
 						</div> <!-- container -->
 
 					</div> <!-- col -->
 
-					<div class="col-lg-6 p-3 p-lg-5 bg-green">
-						<h1 class="display-4 fw-bold lh-1 bg-green">Parker Piedmont</h1>
-						<h4 class="bg-green">Composer & Producer</h4>
+					<div class="col-lg-6 p-3 p-lg-5 bg-accent">
+						<h1 class="display-4 fw-bold lh-1 bg-accent">Parker Piedmont</h1>
+						<hr>
+						<h4 class="bg-accent">Composer & Producer</h4>
 						<p class="lead">I'm a composer and music producer based in Seattle.
 						</p>
 					</div> <!-- col -->
 
 				</div> <!-- row -->
 			</div> <!-- container -->
-		</header>
+		</section>
 
 		<section class="container-fluid">
 			<div class="container my-5">
@@ -50,49 +58,56 @@
 					<div class="row">
 						<div class="col-lg-3 offset-lg-2">
 							<h4>Evolvy Bugs</h4>
-							<img src="">
+							<img src="assets/images/EvovlyBugs.png" style="width: 100%">
 						</div>
-						<div class="col-lg-5">
-							<div class="row p-2 bg-green">
-								<div class="col-10 p-3"><span>Evolvy Bugs</span></div>
-								<div class="col-2 p-3 text-end"><span>Play</span></div>
-								<audio src="assets/audio/gdc demo 1.0.mp3"></audio>
+						<div class="col-lg-5 border rounded-3 overflow-hidden">
+							<div class="row p-3 border-bottom">
+								<div class="col-10 px-3"><span>Evolvy Bugs</span></div>
+								<div class="col-2 px-3 text-end"><span>Play</span></div>
+								<div class="col-12 px-3">
+									<span>0:00</span>
+									<input type="range" max="100" min="0">
+									<span>0:00</span>
+								</div>
+								<audio preload>
+									<source src="assets/audio/gdc demo 1.0.mp3">
+								</audio>
 							</div>
-							<div class="p-3 row bg-green">
+							<div class="p-3 row border-bottom">
 								<span>Embarkation</span>
 								<!-- <audio src="assets/audio/gdc demo 1.0.mp3" controls></audio> -->
 							</div>
-							<div class="p-3 row bg-green">
+							<div class="p-3 row border-bottom">
 								<span>Asteroid Belt</span>
 								<!-- <audio src="assets/audio/gdc demo 1.0.mp3" controls></audio> -->
 							</div>
-							<div class="p-3 row bg-green">
+							<div class="p-3 row border-bottom">
 								<span>Cyberspace</span>
 								<!-- <audio src="assets/audio/gdc demo 1.0.mp3" controls></audio> -->
 							</div>
-							<div class="p-3 row bg-green">
+							<div class="p-3 row border-bottom">
 								<span>Cosmic Jungle</span>
 								<!-- <audio src="assets/audio/gdc demo 1.0.mp3" controls></audio> -->
 							</div>
-							<div class="p-3 row bg-green">
+							<div class="p-3 row border-bottom">
 								<span>Tail of a Comet</span>
 								<!-- <audio src="assets/audio/gdc demo 1.0.mp3" controls></audio> -->
 							</div>
-							<div class="p-3 row bg-green">
+							<div class="p-3 row border-bottom">
 								<span>For Science</span>
 								<!-- <audio src="assets/audio/gdc demo 1.0.mp3" controls></audio> -->
 							</div>
-							<div class="p-3 row bg-green">
+							<div class="p-3 row border-bottom">
 								<span>Mechanized Ruins</span>
 								<!-- <audio src="assets/audio/gdc demo 1.0.mp3" controls></audio> -->
 							</div>
-							<div class="p-3 row bg-green">
+							<div class="p-3 row border-bottom">
 								<span>Entrails</span>
 								<!-- <audio src="assets/audio/gdc demo 1.0.mp3" controls></audio> -->
 							</div>
-							<div class="p-3 row bg-green">
+							<div class="p-3 row">
 								<span>Evolution Always Wins</span>
-								<!-- <audio src="assets/audio/gdc demo 1.0.mp3" controls></audio> -->
+								<!-- <audio src=" assets/audio/gdc demo 1.0.mp3" controls></audio> -->
 							</div>
 						</div>
 					</div>
@@ -103,6 +118,17 @@
 		<section class="container-fluid">
 			<div class="container my-5">
 				<h1 class="text-center">Other Compositions</h1>
+			</div>
+		</section>
+
+		<section class="container-fluid">
+			<div class="container my-5">
+				<h1 class="text-center">Contact</h1>
+				<form>
+					<input type="text" name="name" required>
+					<input type="text" name="email" required>
+					<textarea required></textarea>
+				</form>
 			</div>
 		</section>
 
