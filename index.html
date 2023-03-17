@@ -7,27 +7,34 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Parker Piedmont | Composer & Producer</title>
 	<link href="assets/images/favicon.ico" rel="icon" type="image/x-icon">
+
 	<link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
+	<link href="assets/icons/bootstrap-icons-1.10.3/bootstrap-icons.css" rel="stylesheet">
+
 	<link href="css/fonts.css" rel="stylesheet">
+	<link href="css/variables.css" rel="stylesheet">
+
+	<link href="css/nav.css" rel="stylesheet">
+	<!-- <link href="css/input-range.css" rel="stylesheet"> -->
 	<link href="css/styles.css" rel="stylesheet">
 </head>
 
-<body data-bs-theme="dark">
+<body data-bs-theme="dark" class="font-monospace">
 
-	<nav class="navbar sticky-top navbar-expand-lg overflow-hidden p-0">
+	<nav class="navbar fixed-top navbar-expand-lg overflow-hidden p-0">
 		<div class="container-fluid">
 			<div id="nav-title" class="navbar-text text-center">P<sup>2</sup></div>
 		</div>
 	</nav>
 
-	<main class="py-lg-5 py-3 font-monospace bg-main">
+	<main class="py-lg-5 py-3 bg-main">
 
 		<section class="container-fluid">
 			<div class="container mb-5">
 				<div class="row p-0 rounded-3 overflow-hidden border">
 
+					<!-- Profile picture -->
 					<div class="col-lg-6 p-0">
-
 						<div class="container p-0" style="height: 100%">
 							<div class="row p-5 align-items-center" style="height: 100%">
 								<div class="col-lg-8 offset-lg-2 p-0 overflow-hidden border" style="border-radius: 50%">
@@ -35,15 +42,24 @@
 								</div> <!-- col -->
 							</div> <!-- row -->
 						</div> <!-- container -->
-
 					</div> <!-- col -->
 
+					<!-- Name and bio -->
 					<div class="col-lg-6 p-3 p-lg-5 bg-accent">
-						<h1 class="display-4 fw-bold lh-1 bg-accent">Parker Piedmont</h1>
-						<hr>
-						<h4 class="bg-accent">Composer & Producer</h4>
-						<p class="lead">I'm a composer and music producer based in Seattle.
-						</p>
+						<div class="container" style="height: 100%">
+							<div class="row align-items-center" style="height: 100%">
+								<div class="col-12 color-accent">
+									<h1 class="display-4 fw-bold lh-1 bg-accent text-center text-lg-start">Parker Piedmont</h1>
+									<hr>
+									<p class="lead">Composer & Producer</p>
+									<p class="lead">Seattle, WA</p>
+									<p>
+										<i class="bi-facebook"></i>
+										<i class="bi-instagram"></i>
+									</p>
+								</div> <!-- col -->
+							</div> <!-- row -->
+						</div> <!-- container -->
 					</div> <!-- col -->
 
 				</div> <!-- row -->
@@ -52,73 +68,116 @@
 
 		<section class="container-fluid">
 			<div class="container my-5">
+
 				<h1 class="text-center">Game Compositions</h1>
 
 				<div class="container album">
-					<div class="row">
-						<div class="col-lg-3 offset-lg-2">
-							<h4>Evolvy Bugs</h4>
-							<img src="assets/images/EvovlyBugs.png" style="width: 100%">
-						</div>
-						<div class="col-lg-5 border rounded-3 overflow-hidden">
-							<div class="row p-3 border-bottom">
-								<div class="col-10 px-3"><span>Evolvy Bugs</span></div>
-								<div class="col-2 px-3 text-end"><span>Play</span></div>
-								<div class="col-12 px-3">
-									<span>0:00</span>
-									<input type="range" max="100" min="0">
-									<span>0:00</span>
-								</div>
-								<audio preload>
-									<source src="assets/audio/gdc demo 1.0.mp3">
-								</audio>
+					<div class="row p-0 border rounded-3 overflow-hidden">
+
+						<div class="col-lg-6 p-0">
+							<div class="container p-3">
+								<h4>Evolvy Bugs</h4>
+								<img src="assets/images/EvovlyBugs.png" style="width: 100%">
+							</div> <!-- container -->
+						</div> <!-- col -->
+
+						<div class="col-lg-6 p-0 border-start">
+							<div class="container">
+
+								<div class="row p-0 position-relative border-bottom align-items-center song color-main">
+									<div class="col-10 p-3">Evolvy Bugs</div>
+									<div class="col-2 p-3 text-end"><i class="bi-play"></i></div>
+									<audio preload="metadata">
+										<source src="assets/audio/albums/Evolvy Bugs/01 Evolvy Bugs.mp3">
+									</audio>
+								</div> <!-- row -->
+
+								<div class="row p-0 position-relative border-bottom align-items-center song color-main">
+									<div class="col-10 p-3">Embarkation</div>
+									<div class="col-2 p-3 text-end"><i class="bi-play"></i></div>
+									<audio preload="metadata">
+										<source src="assets/audio/albums/Evolvy Bugs/02 Embarkation.mp3">
+									</audio>
+								</div> <!-- row -->
+
+								<div class="row p-0 position-relative border-bottom align-items-center song color-main">
+									<div class="col-10 p-3">Asteroid Belt</div>
+									<div class="col-2 p-3 text-end"><i class="bi-play"></i></div>
+									<audio preload="metadata">
+										<source src="assets/audio/albums/Evolvy Bugs/03 Asteroid Belt.mp3">
+									</audio>
+								</div> <!-- row -->
+
+								<div class="row p-0 position-relative border-bottom align-items-center song color-main">
+									<div class="col-10 p-3">Information Overload</div>
+									<div class="col-2 p-3 text-end"><i class="bi-play"></i></div>
+									<audio preload="metadata">
+										<source src="assets/audio/albums/Evolvy Bugs/04 Information Overload.mp3">
+									</audio>
+								</div> <!-- row -->
+
+								<div class="row p-0 position-relative border-bottom align-items-center song color-main">
+									<div class="col-10 p-3">Cosmic Jungle</div>
+									<div class="col-2 p-3 text-end"><i class="bi-play"></i></div>
+									<audio preload="metadata">
+										<source src="assets/audio/albums/Evolvy Bugs/05 Cosmic Jungle.mp3">
+									</audio>
+								</div> <!-- row -->
+
+								<div class="row p-0 position-relative border-bottom align-items-center song color-main">
+									<div class="col-10 p-3">Tail of a Comet</div>
+									<div class="col-2 p-3 text-end"><i class="bi-play"></i></div>
+									<audio preload="metadata">
+										<source src="assets/audio/albums/Evolvy Bugs/06 Tail of a Comet.mp3">
+									</audio>
+								</div> <!-- row -->
+
+								<div class="row p-0 position-relative border-bottom align-items-center song color-main">
+									<div class="col-10 p-3">For Science</div>
+									<div class="col-2 p-3 text-end"><i class="bi-play"></i></div>
+									<audio preload="metadata">
+										<source src="assets/audio/albums/Evolvy Bugs/07 For Science.mp3">
+									</audio>
+								</div> <!-- row -->
+
+								<div class="row p-0 position-relative border-bottom align-items-center song color-main">
+									<div class="col-10 p-3">Mechanized Ruins</div>
+									<div class="col-2 p-3 text-end"><i class="bi-play"></i></div>
+									<audio preload="metadata">
+										<source src="assets/audio/albums/Evolvy Bugs/08 Mechanized Ruins.mp3">
+									</audio>
+								</div> <!-- row -->
+
+								<div class="row p-0 position-relative border-bottom align-items-center song color-main">
+									<div class="col-10 p-3">Entrails</div>
+									<div class="col-2 p-3 text-end"><i class="bi-play"></i></div>
+									<audio preload="metadata">
+										<source src="assets/audio/albums/Evolvy Bugs/09 Entrails.mp3">
+									</audio>
+								</div> <!-- row -->
+
+								<div class="row p-0 position-relative align-items-center song color-main">
+									<div class="col-10 p-3">Evolution Always Wins</div>
+									<div class="col-2 p-3 text-end"><i class="bi-play"></i></div>
+									<audio preload="metadata">
+										<source src="assets/audio/albums/Evolvy Bugs/10 Evolution Always Wins.mp3">
+									</audio>
+								</div> <!-- row -->
+
 							</div>
-							<div class="p-3 row border-bottom">
-								<span>Embarkation</span>
-								<!-- <audio src="assets/audio/gdc demo 1.0.mp3" controls></audio> -->
-							</div>
-							<div class="p-3 row border-bottom">
-								<span>Asteroid Belt</span>
-								<!-- <audio src="assets/audio/gdc demo 1.0.mp3" controls></audio> -->
-							</div>
-							<div class="p-3 row border-bottom">
-								<span>Cyberspace</span>
-								<!-- <audio src="assets/audio/gdc demo 1.0.mp3" controls></audio> -->
-							</div>
-							<div class="p-3 row border-bottom">
-								<span>Cosmic Jungle</span>
-								<!-- <audio src="assets/audio/gdc demo 1.0.mp3" controls></audio> -->
-							</div>
-							<div class="p-3 row border-bottom">
-								<span>Tail of a Comet</span>
-								<!-- <audio src="assets/audio/gdc demo 1.0.mp3" controls></audio> -->
-							</div>
-							<div class="p-3 row border-bottom">
-								<span>For Science</span>
-								<!-- <audio src="assets/audio/gdc demo 1.0.mp3" controls></audio> -->
-							</div>
-							<div class="p-3 row border-bottom">
-								<span>Mechanized Ruins</span>
-								<!-- <audio src="assets/audio/gdc demo 1.0.mp3" controls></audio> -->
-							</div>
-							<div class="p-3 row border-bottom">
-								<span>Entrails</span>
-								<!-- <audio src="assets/audio/gdc demo 1.0.mp3" controls></audio> -->
-							</div>
-							<div class="p-3 row">
-								<span>Evolution Always Wins</span>
-								<!-- <audio src=" assets/audio/gdc demo 1.0.mp3" controls></audio> -->
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+
+						</div> <!-- col -->
+
+					</div> <!-- row -->
+				</div> <!-- col -->
+
+			</div> <!-- container -->
 		</section>
 
 		<section class="container-fluid">
 			<div class="container my-5">
 				<h1 class="text-center">Other Compositions</h1>
-			</div>
+			</div> <!-- container -->
 		</section>
 
 		<section class="container-fluid">
@@ -129,11 +188,79 @@
 					<input type="text" name="email" required>
 					<textarea required></textarea>
 				</form>
-			</div>
+			</div> <!-- container -->
 		</section>
 
 	</main>
+
+	<footer class="container-fluid fixed-bottom bg-main">
+		<div class="row p-3 align-items-center">
+
+			<!-- Album art and track name -->
+			<div class="col-3">
+				<div class="container">
+					<div class="row justify-content-start align-items-center">
+						<div class="col-3">
+							<img src="assets/images/EvovlyBugs.png">
+						</div> <!-- col -->
+						<div class="col-6">
+							<span>Evolvy Bugs</span>
+						</div> <!-- col -->
+					</div> <!-- row -->
+				</div> <!-- container -->
+			</div> <!-- col -->
+
+			<!-- Transport controls -->
+			<div class="col-6">
+
+				<!-- Play, rewind, fast forward-->
+				<div class="container">
+					<div class="row">
+						<div class="col-5 px-2 text-end">
+							<i class="bi-rewind"></i>
+						</div> <!-- col -->
+						<div class="col-2 px-2 text-center">
+							<i class="bi-play"></i>
+						</div> <!-- col -->
+						<div class="col-5 px-2 text-start">
+							<i class="bi-fast-forward"></i>
+						</div> <!-- col -->
+					</div> <!-- row -->
+
+					<!-- Playhead and duration -->
+					<div class="row align-items-center">
+						<div class="col-1 px-2">
+							<span id="current-time">--:--</span>
+						</div> <!-- col -->
+						<div class="col-10 px-2">
+							<input id="playhead" name="playhead" type="range" max="100" value="0">
+						</div> <!-- col -->
+						<div class="col-1 px-2">
+							<span id="duration">--:--</span>
+						</div> <!-- col -->
+					</div> <!-- row -->
+				</div> <!-- container -->
+			</div> <!-- col -->
+
+			<div class="col-3">
+				<div class="container">
+					<div class="row justify-content-end align-items-center">
+						<div class="col-7 p-2">
+							<input id="volume" name="volume" type="range" max="100" value="100">
+						</div> <!-- col -->
+						<div class="col-2 p-2">
+							<i class="bi-volume-up"></i>
+						</div> <!-- col -->
+					</div> <!-- row -->
+				</div> <!-- container -->
+			</div> <!-- col -->
+
+		</div> <!-- row -->
+	</footer>
+
 	<script src="js/bootstrap/bootstrap.bundle.min.js"></script>
+	<script src="js/scripts.js"></script>
+	<!-- <script src="js/margins.js"></script> -->
 </body>
 
 </html>
