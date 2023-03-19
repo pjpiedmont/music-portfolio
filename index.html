@@ -88,7 +88,9 @@
 					<!-- Album art and description -->
 					<div class="col-lg-6 p-0 border-top">
 						<div class="container p-3">
-							<img src="assets/images/" style="width: 100%">
+							<div class="container p-0 album-art">
+								<img src="assets/images/">
+							</div>
 						</div> <!-- container -->
 					</div> <!-- col -->
 
@@ -311,13 +313,12 @@
 					</div> <!-- container -->
 				</div> <!-- col -->
 
-				<!-- Everything else -->
-				<div class="col-9">
+				<div class="col-9 col-lg-6">
 					<div class="container">
 						<div class="row p-0">
 
 							<!-- Transport controls -->
-							<div class="col-10 col-lg-8 p-0">
+							<div class="col-10 col-lg-12 p-0">
 
 								<!-- Play, rewind, fast forward-->
 								<div class="container">
@@ -325,17 +326,17 @@
 
 										<!-- Rewind -->
 										<div class="col-4 col-lg-5 px-2 text-end color-main">
-											<i class="bi-rewind"></i>
+											<i class="bi-rewind control"></i>
 										</div> <!-- col -->
 
 										<!-- Play -->
 										<div class="col-4 col-lg-2 px-2 text-center color-main">
-											<i class="bi-play"></i>
+											<i class="bi-play control"></i>
 										</div> <!-- col -->
 
 										<!-- Fast forward -->
 										<div class="col-4 col-lg-5 px-2 text-start color-main">
-											<i class="bi-fast-forward"></i>
+											<i class="bi-fast-forward control"></i>
 										</div> <!-- col -->
 
 									</div> <!-- row -->
@@ -350,7 +351,7 @@
 
 										<!-- Playhead -->
 										<div class="col-12 col-lg-8 px-2">
-											<input id="playhead" name="playhead" type="range" max="100" value="0">
+											<input id="playhead" name="playhead" type="range" max="100" value="0" class="form-range">
 										</div> <!-- col -->
 
 										<!-- Track duration -->
@@ -362,19 +363,19 @@
 								</div> <!-- container -->
 							</div> <!-- col -->
 
-							<!-- Volume control -->
-							<div class="col-2 col-lg-4 p-0">
+							<!-- Volume control for mobile -->
+							<div class="col-2 col-lg-4 p-0 d-lg-none">
 								<div class="container">
 									<div class="row justify-content-end align-items-center">
 
 										<!-- Volume slider -->
 										<div class="col-7 p-2 d-none d-lg-block">
-											<input id="volume" name="volume" type="range" max="100" value="100">
+											<input id="volume" name="volume" type="range" max="100" value="100" class="form-range">
 										</div> <!-- col -->
 
 										<!-- Volume icon -->
 										<div class="col-12 col-lg-2 p-2 color-main text-end">
-											<i class="bi-volume-up"></i>
+											<i class="bi-volume-up control"></i>
 										</div> <!-- col -->
 
 									</div> <!-- row -->
@@ -385,7 +386,7 @@
 						</div> <!-- row -->
 					</div> <!-- container -->
 
-					<!-- Track name for mobile -->
+					<!-- Track name for desktop -->
 					<div class="container">
 						<div class="row d-lg-none">
 							<div class="col-12 text-center">
@@ -394,6 +395,25 @@
 						</div> <!-- row -->
 					</div> <!-- container -->
 
+				</div> <!-- col -->
+
+				<!-- Volume control for mobile -->
+				<div class="col-3 p-0 d-none d-lg-block">
+					<div class="container">
+						<div class="row justify-content-end align-items-center">
+
+							<!-- Volume slider -->
+							<div class="col-7 p-2 d-none d-lg-block">
+								<input id="volume" name="volume" type="range" max="100" value="100" class="form-range">
+							</div> <!-- col -->
+
+							<!-- Volume icon -->
+							<div class="col-12 col-lg-2 p-2 color-main text-end">
+								<i class="bi-volume-up control"></i>
+							</div> <!-- col -->
+
+						</div> <!-- row -->
+					</div> <!-- container -->
 				</div> <!-- col -->
 
 			</div> <!-- row -->
