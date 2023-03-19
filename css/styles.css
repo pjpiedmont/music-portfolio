@@ -113,3 +113,15 @@ textarea:focus {
 		border-left: 1px solid var(--accent-bg-color);
 	}
 }
+
+.profile-pic {
+	overflow: hidden;
+	border: 1px solid var(--accent-bg-color);
+	border-radius: 50%;
+}
+
+.album-art {
+	overflow: hidden;
+	border: 1px solid var(--accent-bg-color);
+	border-radius: 10%;
+}
