@@ -62,9 +62,9 @@ main {
 	margin-bottom: var(--footer-height);
 }
 
-input {
+/* input {
 	width: 100%;
-}
+} */
 
 .song:hover {
 	color: var(--accent-bg-color) !important;
@@ -129,4 +129,22 @@ textarea:focus {
 .control:hover {
 	color: var(--accent-bg-color);
 	cursor: pointer;
+}
+
+:root {
+	--slider-size: 5px;
+}
+
+.progress {
+	width: 100%;
+	height: var(--slider-size);
+	margin-top: calc((1rem - var(--slider-size)) / 2);
+	z-index: -1;
+}
+
+.playhead-input {
+	top: -0.25rem;
+	padding-left: 8px;
+	padding-right: 8px;
+	/* visibility: hidden; */
 }

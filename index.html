@@ -15,7 +15,7 @@
 	<link href="css/variables.css" rel="stylesheet">
 
 	<link href="css/nav.css" rel="stylesheet">
-	<!-- <link href="css/input-range.css" rel="stylesheet"> -->
+	<link href="css/input-range.css" rel="stylesheet">
 	<link href="css/styles.css" rel="stylesheet">
 </head>
 
@@ -89,7 +89,7 @@
 					<div class="col-lg-6 p-0 border-top">
 						<div class="container p-3">
 							<div class="container p-0 album-art">
-								<img src="assets/images/">
+								<img src="">
 							</div>
 						</div> <!-- container -->
 					</div> <!-- col -->
@@ -101,17 +101,17 @@
 							<div class="row px-xl-5 px-md-3 py-0 position-relative border-bottom align-items-center song color-main">
 								<div class="col-10 p-3">Saturday Snowfall</div>
 								<div class="col-2 p-3 text-end"><i class="bi-play"></i></div>
-								<audio preload="metadata">
-									<source src="assets/audio/albums/Solace and Respite/">
-								</audio>
+								<!-- <audio preload="metadata">
+									<source src="">
+								</audio> -->
 							</div> <!-- row -->
 
 							<div class="row px-xl-5 px-md-3 py-0 position-relative align-items-center song color-main">
-								<div class="col-10 p-3">Embarkation</div>
+								<div class="col-10 p-3">---</div>
 								<div class="col-2 p-3 text-end"><i class="bi-play"></i></div>
-								<audio preload="metadata">
-									<source src="assets/audio/albums/Solace and Respite/">
-								</audio>
+								<!-- <audio preload="metadata">
+									<source src="">
+								</audio> -->
 							</div> <!-- row -->
 
 						</div> <!-- container -->
@@ -350,8 +350,13 @@
 										</div> <!-- col -->
 
 										<!-- Playhead -->
-										<div class="col-12 col-lg-8 px-2">
-											<input id="playhead" name="playhead" type="range" max="100" value="0" class="form-range">
+										<div class="col-12 col-lg-8 px-2 position-relative">
+											<input name="playhead" type="range" max="100" value="0"
+												class="form-range position-absolute start-0 end-0 playhead-input">
+											<div class="progress position-relative">
+												<div class="progress-bar bg-accent playhead-display" role="progressbar" aria-valuenow="0"
+													aria-valuemin="0" aria-valuemax="100"></div>
+											</div>
 										</div> <!-- col -->
 
 										<!-- Track duration -->
@@ -386,10 +391,10 @@
 						</div> <!-- row -->
 					</div> <!-- container -->
 
-					<!-- Track name for desktop -->
-					<div class="container">
-						<div class="row d-lg-none">
-							<div class="col-12 text-center">
+					<!-- Track name for mobile -->
+					<div class="container d-lg-none">
+						<div class="row">
+							<div class="col-12 text-start">
 								Evolution Always Wins
 							</div> <!-- col -->
 						</div> <!-- row -->
@@ -397,7 +402,7 @@
 
 				</div> <!-- col -->
 
-				<!-- Volume control for mobile -->
+				<!-- Volume control for desktop -->
 				<div class="col-3 p-0 d-none d-lg-block">
 					<div class="container">
 						<div class="row justify-content-end align-items-center">
@@ -423,6 +428,7 @@
 
 	<script src="js/bootstrap/bootstrap.bundle.min.js"></script>
 	<script src="js/scripts.js"></script>
+	<script src="js/playhead.js"></script>
 	<!-- <script src="js/margins.js"></script> -->
 </body>
 

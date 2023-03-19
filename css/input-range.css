@@ -1,57 +1,73 @@
-/* General range input styles */
-input[type="range"] {
-	-webkit-appearance: none;
-	height: 2px;
-	background: rgba(255, 255, 255, 0.4);
-	border-radius: 5px;
-	/* background-image: linear-gradient(var(--accent-bg-color), var(--accent-bg-color)); */
-	/* background-size: 70% 100%; */
-	/* background-repeat: no-repeat; */
+:root {
+	/* Colors */
+	--input-accent: var(--accent-bg-color);
+	--input-primary: #fff;
+
+	--thumb-size: 1rem;
+	--track-size: 1rem;
 }
 
-/* Track */
-input[type="range"]::-webkit-slider-runnable-track {
+/* Base thumb styles */
+.form-range::-webkit-slider-thumb {
+	width: var(--thumb-size);
+	height: var(--thumb-size);
+	margin-top: -0.25rem;
+	background-color: var(--input-primary);
+	border: 0;
+	border-radius: 1rem;
+	-webkit-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+	transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 	-webkit-appearance: none;
-	box-shadow: none;
+	appearance: none;
+}
+
+.form-range::-moz-range-thumb {
+	width: var(--thumb-size);
+	height: var(--thumb-size);
+	background-color: var(--input-primary);
+	border: 0;
+	border-radius: 1rem;
+	-moz-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+	transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+/* Thumb active */
+.form-range::-webkit-slider-thumb:active {
+	background-color: var(--input-accent);
+}
+
+.form-range::-moz-range-thumb:active {
+	background-color: var(--input-accent);
+}
+
+/* Thumb focused */
+.form-range:focus::-webkit-slider-thumb {
+	box-shadow: 0 0 0 1px var(--input-accent), 0 0 0 0.25rem var(--input-primary);
+}
+
+.form-range:focus::-moz-range-thumb {
+	box-shadow: 0 0 0 1px var(--input-accent), 0 0 0 0.25rem var(--input-primary);
+}
+
+/* Track styles */
+.form-range::-webkit-slider-runnable-track {
+	width: 100%;
+	height: var(--track-size);
+	color: transparent;
+	cursor: pointer;
+	background-color: transparent;
 	border: none;
-	background: transparent;
+	border-radius: 1rem;
 }
 
-input[type="range"]::-moz-range-track {}
-
-input[type="range"]::-ms-track {}
-
-/* Thumb */
-input[type=”range”]::-webkit-slider-thumb {
-	-webkit-appearance: none;
-	height: 10px;
-	width: 10px;
-	border-radius: 50%;
-	background: #ff4500;
-	cursor: ew-resize;
-	box-shadow: 0 0 2px 0 #555;
-	transition: background .3s ease-in-out;
-}
-
-input[type=”range”]::-moz-range-thumb {
-	-webkit-appearance: none;
-	height: 10px;
-	width: 10px;
-	border: 1px solid var(--accent-bg-color);
-	border-radius: 50%;
-	background: var(--main-bg-color);
-	cursor: ew-resize;
-	/* box-shadow: 0 0 2px 0 #555; */
-	transition: background .3s ease-in-out;
-}
-
-input[type=”range”]::-ms-thumb {
-	height: 10px;
-	width: 10px;
-	border: 1px solid var(--accent-bg-color);
-	border-radius: 50%;
-	background: var(--main-bg-color);
-	cursor: ew-resize;
-	/* box-shadow: 0 0 2px 0 #555; */
-	transition: background .3s ease-in-out;
+.form-range::-moz-range-track {
+	width: 100%;
+	height: var(--track-size);
+	color: transparent;
+	cursor: pointer;
+	background-color: transparent;
+	border: none;
+	border-radius: 1rem;
 }
