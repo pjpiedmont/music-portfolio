@@ -239,11 +239,13 @@ mute.addEventListener('click', (e) => {
 		volume_display.setAttribute('style', 'width: 100%');
 		volume_display.setAttribute('aria-valuenow', '100');
 		nowplaying.volume = 1;
+		muted = false;
 	}
 	else {
 		volume_display.setAttribute('style', 'width: 0%');
 		volume_display.setAttribute('aria-valuenow', '0');
 		nowplaying.volume = 0;
+		muted = true;
 	}
 })
 
