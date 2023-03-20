@@ -108,7 +108,7 @@ const loadTrack = (tracknum) => {
 	}
 	else {
 		name = '---';
-		image = '';
+		image = '../assets/images/album placeholder.png';
 		path = '';
 	}
 
