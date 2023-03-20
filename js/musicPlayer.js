@@ -17,15 +17,17 @@ const duration = document.querySelector('#duration');
 const volume_input = document.querySelector('#volume-input');
 const volume_display = document.querySelector('#volume-display');
 
+const trackbtnlist = Array.from(document.querySelectorAll('.song'));
+
 const tracklist = [
 	{
 		name: "Saturday Snowfall",
-		image: "",
+		image: "../assets/images/album placeholder.png",
 		path: "../assets/audio/albums/Solace and Respite/05 Cosmic Jungle.mp3"
 	},
 	{
-		name: "",
-		image: "",
+		name: "---",
+		image: "../assets/images/album placeholder.png",
 		path: "../assets/audio/albums/Solace and Respite/05 Cosmic Jungle.mp3"
 	},
 	{
@@ -80,13 +82,13 @@ const tracklist = [
 	},
 	{
 		name: "Underflow",
-		image: "",
-		path: "../assets/audio/singles/gdc demo 1.0.mp3"
+		image: "../assets/images/album placeholder.png",
+		path: "../assets/audio/singles/underflow.mp3"
 	},
 	{
 		name: "Flux Pulse",
-		image: "",
-		path: "../assets/audio/singles/gdc demo 1.0.mp3"
+		image: "../assets/images/album placeholder.png",
+		path: "../assets/audio/singles/flux pulse.mp3"
 	}
 ]
 
@@ -143,14 +145,23 @@ const playTrack = () => {
 	nowplaying.play();
 	playing = true;
 
-	playbtn.classList.replace('bi-play', 'bi-pause');
+	playbtn.classList.replace('bi-play-circle-fill', 'bi-pause-circle-fill');
+
+	// Array.from(trackbtns).forEach(btn => {
+	// 	if (parseInt(btn.getAttribute('data-tracknum')) === tracknum) {
+	// 		console.log(`play: ${btn}`);
+	// 	}
+
+	// 	console.log(`playing tracknum: ${tracknum}`);
+	// 	console.log(`song tracknum: ${parseInt(btn.getAttribute('data-tracknum'))}`);
+	// });
 }
 
 const pauseTrack = () => {
 	nowplaying.pause();
 	playing = false;
 
-	playbtn.classList.replace('bi-pause', 'bi-play');
+	playbtn.classList.replace('bi-pause-circle-fill', 'bi-play-circle-fill');
 }
 
 const nextTrack = () => {
@@ -204,26 +215,68 @@ const seekUpdate = () => {
 }
 
 playhead_input.addEventListener('change', (e) => {
-	// let value = e.target.value;
 	let percent = (e.target.value / playhead_input.getAttribute('max')) * 100;
-
-	// console.log(`playhead value: ${value}`);
-	// console.log(`playhead percent: ${percent}`);
 
 	playhead_display.setAttribute('style', `width: ${percent}%`);
 	playhead_display.setAttribute('aria-valuenow', `${percent}`);
+
 	seekTo();
 });
 
 volume_input.addEventListener('input', (e) => {
-	let value = e.target.value;
-	let percent = `${(e.target.value / volume_input.getAttribute('max')) * 100}%`;
+	let percent = (e.target.value / volume_input.getAttribute('max')) * 100;
 
-	console.log(`volume value: ${value}`);
-	console.log(`volume percent: ${percent}`);
+	volume_display.setAttribute('style', `width: ${percent}%`);
+	volume_display.setAttribute('aria-valuenow', `${percent}`);
 
-	volume_display.setAttribute('style', `width: ${percent}`);
-	volume_display.setAttribute('aria-valuenow', `width: ${percent}`);
+	nowplaying.volume = percent / 100;
+});
+
+playbtn.addEventListener('click', () => {
+	playPauseTrack();
+});
+
+rewindbtn.addEventListener('click', () => {
+	prevTrack();
+});
+
+fforwardbtn.addEventListener('click', () => {
+	nextTrack();
+});
+
+trackbtnlist.forEach((btn) => {
+	btn.addEventListener('click', (e) => {
+		const this_tracknum = parseInt(btn.getAttribute('data-tracknum'));
+		const playpausebtn = btn.querySelector(':scope > .col-2 > i');
+
+		console.log(`tracknum: ${tracknum}`);
+		console.log(`this_tracknum: ${this_tracknum}`);
+
+		if (this_tracknum === tracknum && playing) {
+			pauseTrack();
+			playpausebtn.classList.replace('bi-pause-circle', 'bi-play');
+		}
+		else if (this_tracknum === tracknum && !playing) {
+			playTrack();
+			playpausebtn.classList.replace('bi-play', 'bi-pause-circle');
+		}
+		else {
+			let pausebtnlist = Array.from(document.querySelectorAll('.bi-pause-circle'));
+			pausebtnlist.forEach((pausebtn) => {
+				pausebtn.classList.replace('bi-pause-circle', 'bi-play');
+			});
+
+			trackbtnlist.forEach((trackbtn) => {
+				trackbtn.classList.remove('playing');
+			})
+
+			tracknum = this_tracknum;
+			loadTrack(tracknum);
+			playTrack();
+			playpausebtn.classList.replace('bi-play', 'bi-pause-circle');
+			btn.classList.add('playing');
+		}
+	});
 });
 
 loadTrack(tracknum);

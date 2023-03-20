@@ -67,7 +67,8 @@ footer {
 } */
 
 .song:hover {
-	color: var(--accent-bg-color) !important;
+	background-color: var(--accent-bg-color);
+	color: var(--accent-text-color) !important;
 	cursor: pointer;
 }
 
@@ -182,4 +183,8 @@ span {
 
 .track-name {
 	text-overflow: ellipsis;
+}
+
+.playing {
+	color: var(--accent-bg-color);
 }
