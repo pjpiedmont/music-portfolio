@@ -133,17 +133,17 @@ textarea:focus {
 	border-radius: 10%;
 }
 
-.control,
+/* .control,
 .song {
 	-webkit-transition: color 0.15s ease-in-out;
 	transition: color 0.15s ease-in-out;
-}
+} */
 
-#submit,
+/* #submit,
 #submit>h1 {
 	-webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
 	transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
-}
+} */
 
 .control:hover {
 	color: var(--accent-bg-color);

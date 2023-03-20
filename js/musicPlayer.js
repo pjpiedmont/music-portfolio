@@ -90,7 +90,7 @@ playhead_input.addEventListener('change', (e) => {
 	playhead_display.setAttribute('aria-valuenow', `width: ${percent}`);
 });
 
-volume_input.addEventListener('change', (e) => {
+volume_input.addEventListener('input', (e) => {
 	let value = e.target.value;
 	let percent = `${(e.target.value / volume_input.getAttribute('max')) * 100}%`;
 
