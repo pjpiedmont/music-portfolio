@@ -27,11 +27,11 @@ const tracklist = [
 		image: "../assets/images/album placeholder.png",
 		path: "../assets/audio/albums/Solace and Respite/dad 01.01.mp3"
 	},
-	{
-		name: "---",
-		image: "../assets/images/album placeholder.png",
-		path: "../assets/audio/albums/Solace and Respite/dad 01.01.mp3"
-	},
+	// {
+	// 	name: "---",
+	// 	image: "../assets/images/album placeholder.png",
+	// 	path: "../assets/audio/albums/Solace and Respite/dad 01.01.mp3"
+	// },
 	{
 		name: "Evolvy Bugs",
 		image: "../assets/images/EvolvyBugs.png",
