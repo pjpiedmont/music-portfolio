@@ -2,6 +2,7 @@ const nowplaying = document.querySelector('#now-playing');
 
 const trackart = document.querySelector('#track-art');
 const trackname = document.querySelector('#track-name');
+const tracknameMobile = document.querySelector('#track-name-mobile');
 
 const playbtn = document.querySelector('#play');
 const rewindbtn = document.querySelector('#rewind');
@@ -117,6 +118,7 @@ const loadTrack = (tracknum) => {
 
 	trackart.setAttribute('src', image);
 	trackname.textContent = name;
+	tracknameMobile.textContent = name;
 
 	seekTimer = setInterval(seekUpdate, 1000);
 
@@ -182,6 +184,8 @@ const seekUpdate = () => {
 	if (!isNaN(nowplaying.duration)) {
 		seekPosition = nowplaying.currentTime * (100 / nowplaying.duration);
 		playhead_input.value = seekPosition;
+		playhead_display.setAttribute('style', `width: ${seekPosition}%`);
+		playhead_display.setAttribute('aria-valuenow', `${seekPosition}`);
 
 		let currentMinutes = Math.floor(nowplaying.currentTime / 60);
 		let currentSeconds = Math.floor(nowplaying.currentTime - currentMinutes * 60);
@@ -200,14 +204,15 @@ const seekUpdate = () => {
 }
 
 playhead_input.addEventListener('change', (e) => {
-	let value = e.target.value;
-	let percent = `${(e.target.value / playhead_input.getAttribute('max')) * 100}%`;
+	// let value = e.target.value;
+	let percent = (e.target.value / playhead_input.getAttribute('max')) * 100;
 
-	console.log(`playhead value: ${value}`);
-	console.log(`playhead percent: ${percent}`);
+	// console.log(`playhead value: ${value}`);
+	// console.log(`playhead percent: ${percent}`);
 
-	playhead_display.setAttribute('style', `width: ${percent}`);
-	playhead_display.setAttribute('aria-valuenow', `width: ${percent}`);
+	playhead_display.setAttribute('style', `width: ${percent}%`);
+	playhead_display.setAttribute('aria-valuenow', `${percent}`);
+	seekTo();
 });
 
 volume_input.addEventListener('input', (e) => {
