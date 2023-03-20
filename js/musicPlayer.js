@@ -16,6 +16,7 @@ const duration = document.querySelector('#duration');
 
 const volume_input = document.querySelector('#volume-input');
 const volume_display = document.querySelector('#volume-display');
+const mute = document.querySelector('#mute');
 
 const trackbtnlist = Array.from(document.querySelectorAll('.song'));
 
@@ -95,6 +96,7 @@ const tracklist = [
 let tracknum = 0;
 let playing = false;
 let seekTimer;
+let muted = false;
 
 const loadTrack = (tracknum) => {
 	let name;
@@ -231,6 +233,19 @@ volume_input.addEventListener('input', (e) => {
 
 	nowplaying.volume = percent / 100;
 });
+
+mute.addEventListener('click', (e) => {
+	if (muted) {
+		volume_display.setAttribute('style', 'width: 100%');
+		volume_display.setAttribute('aria-valuenow', '100');
+		nowplaying.volume = 1;
+	}
+	else {
+		volume_display.setAttribute('style', 'width: 0%');
+		volume_display.setAttribute('aria-valuenow', '0');
+		nowplaying.volume = 0;
+	}
+})
 
 playbtn.addEventListener('click', () => {
 	playPauseTrack();
