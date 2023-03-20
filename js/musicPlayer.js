@@ -23,12 +23,12 @@ const tracklist = [
 	{
 		name: "Saturday Snowfall",
 		image: "../assets/images/album placeholder.png",
-		path: "../assets/audio/albums/Solace and Respite/05 Cosmic Jungle.mp3"
+		path: "../assets/audio/albums/Solace and Respite/dad 01.01.mp3"
 	},
 	{
 		name: "---",
 		image: "../assets/images/album placeholder.png",
-		path: "../assets/audio/albums/Solace and Respite/05 Cosmic Jungle.mp3"
+		path: "../assets/audio/albums/Solace and Respite/dad 01.01.mp3"
 	},
 	{
 		name: "Evolvy Bugs",

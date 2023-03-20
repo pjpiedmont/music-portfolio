@@ -188,3 +188,8 @@ span {
 .playing {
 	color: var(--accent-bg-color);
 }
+
+#track-art {
+	border-radius: 10%;
+	overflow: hidden;
+}
