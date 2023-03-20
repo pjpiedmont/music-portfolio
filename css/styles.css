@@ -82,6 +82,7 @@ img {
 }
 
 input[type="text"],
+input[type="email"],
 #submit,
 textarea {
 	width: 100%;
@@ -107,6 +108,7 @@ textarea {
 }
 
 input[type="text"]:focus,
+input[type="email"]:focus,
 #submit,
 textarea:focus {
 	outline: none;

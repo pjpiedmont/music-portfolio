@@ -19,6 +19,7 @@ const volume_display = document.querySelector('#volume-display');
 const mute = document.querySelector('#mute');
 
 const trackbtnlist = Array.from(document.querySelectorAll('.song'));
+const playbtnlist = Array.from(document.querySelectorAll('.bi-play'));
 
 const tracklist = [
 	{
@@ -149,14 +150,10 @@ const playTrack = () => {
 
 	playbtn.classList.replace('bi-play-circle-fill', 'bi-pause-circle-fill');
 
-	// Array.from(trackbtns).forEach(btn => {
-	// 	if (parseInt(btn.getAttribute('data-tracknum')) === tracknum) {
-	// 		console.log(`play: ${btn}`);
-	// 	}
-
-	// 	console.log(`playing tracknum: ${tracknum}`);
-	// 	console.log(`song tracknum: ${parseInt(btn.getAttribute('data-tracknum'))}`);
-	// });
+	resetTrackBtns();
+	trackbtnlist[tracknum].classList.add('playing');
+	playbtnlist[tracknum].classList.replace('bi-play', 'bi-pause-circle');
+	playbtnlist[tracknum].classList.replace('bi-play-circle', 'bi-pause-circle');
 }
 
 const pauseTrack = () => {
@@ -164,6 +161,7 @@ const pauseTrack = () => {
 	playing = false;
 
 	playbtn.classList.replace('bi-pause-circle-fill', 'bi-play-circle-fill');
+	playbtnlist[tracknum].classList.replace('bi-pause-circle', 'bi-play-circle');
 }
 
 const nextTrack = () => {
@@ -216,6 +214,17 @@ const seekUpdate = () => {
 	}
 }
 
+const resetTrackBtns = () => {
+	trackbtnlist.forEach((btn) => {
+		btn.classList.remove('playing');
+	});
+
+	playbtnlist.forEach((btn) => {
+		btn.classList.replace('bi-pause-circle', 'bi-play');
+		btn.classList.replace('bi-play-circle', 'bi-play');
+	});
+}
+
 playhead_input.addEventListener('change', (e) => {
 	let percent = (e.target.value / playhead_input.getAttribute('max')) * 100;
 
@@ -239,12 +248,14 @@ mute.addEventListener('click', (e) => {
 		volume_display.setAttribute('style', 'width: 100%');
 		volume_display.setAttribute('aria-valuenow', '100');
 		nowplaying.volume = 1;
+		mute.classList.replace('bi-volume-mute', 'bi-volume-up');
 		muted = false;
 	}
 	else {
 		volume_display.setAttribute('style', 'width: 0%');
 		volume_display.setAttribute('aria-valuenow', '0');
 		nowplaying.volume = 0;
+		mute.classList.replace('bi-volume-up', 'bi-volume-mute');
 		muted = true;
 	}
 })
@@ -266,32 +277,23 @@ trackbtnlist.forEach((btn) => {
 		const this_tracknum = parseInt(btn.getAttribute('data-tracknum'));
 		const playpausebtn = btn.querySelector(':scope > .col-2 > i');
 
-		console.log(`tracknum: ${tracknum}`);
-		console.log(`this_tracknum: ${this_tracknum}`);
+		// console.log(`tracknum: ${tracknum}`);
+		// console.log(`this_tracknum: ${this_tracknum}`);
 
 		if (this_tracknum === tracknum && playing) {
 			pauseTrack();
-			playpausebtn.classList.replace('bi-pause-circle', 'bi-play');
+			// playpausebtn.classList.replace('bi-pause-circle', 'bi-play');
 		}
 		else if (this_tracknum === tracknum && !playing) {
 			playTrack();
-			playpausebtn.classList.replace('bi-play', 'bi-pause-circle');
+			// playpausebtn.classList.replace('bi-play', 'bi-pause-circle');
 		}
 		else {
-			let pausebtnlist = Array.from(document.querySelectorAll('.bi-pause-circle'));
-			pausebtnlist.forEach((pausebtn) => {
-				pausebtn.classList.replace('bi-pause-circle', 'bi-play');
-			});
-
-			trackbtnlist.forEach((trackbtn) => {
-				trackbtn.classList.remove('playing');
-			})
-
 			tracknum = this_tracknum;
 			loadTrack(tracknum);
 			playTrack();
-			playpausebtn.classList.replace('bi-play', 'bi-pause-circle');
-			btn.classList.add('playing');
+			// playpausebtn.classList.replace('bi-play', 'bi-pause-circle');
+			// btn.classList.add('playing');
 		}
 	});
 });
