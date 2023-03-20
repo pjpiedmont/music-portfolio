@@ -57,10 +57,10 @@ footer {
 	border-top: 1px solid var(--accent-bg-color);
 }
 
-main {
+/* main {
 	margin-top: var(--nav-height);
 	margin-bottom: var(--footer-height);
-}
+} */
 
 /* input {
 	width: 100%;

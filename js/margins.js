@@ -3,8 +3,7 @@ const navbar = document.querySelector('nav');
 const footer = document.querySelector('footer');
 
 const setMainMargins = () => {
-	main.style.marginTop = navbar.offsetHeight;
-	main.style.marginBottom = footer.offsetHeight;
+	main.setAttribute('style', `margin-top: ${navbar.offsetHeight}px; margin-bottom: ${footer.offsetHeight}px`);
 }
 
-window.onload = setMainMargins;
+setMainMargins();
