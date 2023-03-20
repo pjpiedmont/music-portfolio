@@ -20,64 +20,184 @@ const tracklist = [
 	{
 		name: "Saturday Snowfall",
 		image: "",
-		path: "../assets/audio/albums/Solace and Respite/Cosmic Jungle.mp3"
+		path: "../assets/audio/albums/Solace and Respite/05 Cosmic Jungle.mp3"
 	},
 	{
 		name: "",
 		image: "",
-		path: "../assets/audio/albums/Solace and Respite/Cosmic Jungle.mp3"
+		path: "../assets/audio/albums/Solace and Respite/05 Cosmic Jungle.mp3"
 	},
 	{
 		name: "Evolvy Bugs",
 		image: "../assets/images/EvolvyBugs.png",
-		path: "../assets/audio/albums/Solace and Respite/01 Evolvy Bugs.mp3"
+		path: "../assets/audio/albums/Evolvy Bugs/01 Evolvy Bugs.mp3"
+	},
+	{
+		name: "Embarkation",
+		image: "../assets/images/EvolvyBugs.png",
+		path: "../assets/audio/albums/Evolvy Bugs/02 Embarkation.mp3"
 	},
 	{
 		name: "Asteroid Belt",
 		image: "../assets/images/EvolvyBugs.png",
-		path: "../assets/audio/albums/Solace and Respite/02 Asteroid Belt.mp3"
+		path: "../assets/audio/albums/Evolvy Bugs/03 Asteroid Belt.mp3"
 	},
 	{
-		name: "Saturday Snowfall",
+		name: "Information Overload",
 		image: "../assets/images/EvolvyBugs.png",
-		path: "../assets/audio/albums/Solace and Respite/Cosmic Jungle.mp3"
+		path: "../assets/audio/albums/Evolvy Bugs/04 Information Overload.mp3"
 	},
 	{
-		name: "Saturday Snowfall",
+		name: "Cosmic Jungle",
 		image: "../assets/images/EvolvyBugs.png",
-		path: "../assets/audio/albums/Solace and Respite/Cosmic Jungle.mp3"
+		path: "../assets/audio/albums/Evolvy Bugs/05 Cosmic Jungle.mp3"
 	},
 	{
-		name: "Saturday Snowfall",
+		name: "Tail of a Comet",
 		image: "../assets/images/EvolvyBugs.png",
-		path: "../assets/audio/albums/Solace and Respite/Cosmic Jungle.mp3"
+		path: "../assets/audio/albums/Evolvy Bugs/06 Tail of a Comet.mp3"
 	},
 	{
-		name: "Saturday Snowfall",
+		name: "For Science",
 		image: "../assets/images/EvolvyBugs.png",
-		path: "../assets/audio/albums/Solace and Respite/Cosmic Jungle.mp3"
+		path: "../assets/audio/albums/Evolvy Bugs/07 For Science.mp3"
 	},
 	{
-		name: "Saturday Snowfall",
+		name: "Mechanized Ruins",
 		image: "../assets/images/EvolvyBugs.png",
-		path: "../assets/audio/albums/Solace and Respite/Cosmic Jungle.mp3"
+		path: "../assets/audio/albums/Evolvy Bugs/08 Mechanized Ruins.mp3"
 	},
 	{
-		name: "Saturday Snowfall",
+		name: "Entrails",
 		image: "../assets/images/EvolvyBugs.png",
-		path: "../assets/audio/albums/Solace and Respite/Cosmic Jungle.mp3"
+		path: "../assets/audio/albums/Evolvy Bugs/09 Entrails.mp3"
 	},
 	{
-		name: "Saturday Snowfall",
+		name: "Evolution Always Wins",
 		image: "../assets/images/EvolvyBugs.png",
-		path: "../assets/audio/albums/Solace and Respite/Cosmic Jungle.mp3"
+		path: "../assets/audio/albums/Evolvy Bugs/10 Evolution Always Wins.mp3"
 	},
 	{
-		name: "Saturday Snowfall",
-		image: "../assets/images/EvolvyBugs.png",
-		path: "../assets/audio/albums/Solace and Respite/Cosmic Jungle.mp3"
+		name: "Underflow",
+		image: "",
+		path: "../assets/audio/singles/gdc demo 1.0.mp3"
 	},
+	{
+		name: "Flux Pulse",
+		image: "",
+		path: "../assets/audio/singles/gdc demo 1.0.mp3"
+	}
 ]
+
+let tracknum = 0;
+let playing = false;
+let seekTimer;
+
+const loadTrack = (tracknum) => {
+	let name;
+	let image;
+	let path;
+
+	if (tracknum > -1) {
+		name = tracklist[tracknum].name;
+		image = tracklist[tracknum].image;
+		path = tracklist[tracknum].path;
+	}
+	else {
+		name = '---';
+		image = '';
+		path = '';
+	}
+
+	clearInterval(seekTimer);
+	resetValues();
+
+	nowplaying.setAttribute('src', path);
+	nowplaying.load();
+
+	trackart.setAttribute('src', image);
+	trackname.textContent = name;
+
+	seekTimer = setInterval(seekUpdate, 1000);
+
+	nowplaying.addEventListener('ended', nextTrack);
+}
+
+const resetValues = () => {
+	currtime.textContent = '--:--';
+	duration.textContent = '--:--';
+	playhead_input.value = 0;
+	playhead_display.setAttribute('style', 'width: 0%;');
+}
+
+const playPauseTrack = () => {
+	if (!playing)
+		playTrack();
+	else
+		pauseTrack();
+}
+
+const playTrack = () => {
+	nowplaying.play();
+	playing = true;
+
+	playbtn.classList.replace('bi-play', 'bi-pause');
+}
+
+const pauseTrack = () => {
+	nowplaying.pause();
+	playing = false;
+
+	playbtn.classList.replace('bi-pause', 'bi-play');
+}
+
+const nextTrack = () => {
+	if (tracknum < tracklist.length - 1)
+		tracknum++;
+	else
+		tracknum = 0;
+
+	loadTrack(tracknum);
+	playTrack();
+}
+
+const prevTrack = () => {
+	if (tracknum > 0)
+		tracknum--;
+	else
+		tracknum = tracklist.length - 1;
+
+	loadTrack(tracknum);
+	playTrack();
+}
+
+const seekTo = () => {
+	let seekto = nowplaying.duration * (playhead_input.value / 100);
+	nowplaying.currentTime = seekto;
+}
+
+const seekUpdate = () => {
+	let seekPosition = 0;
+
+	if (!isNaN(nowplaying.duration)) {
+		seekPosition = nowplaying.currentTime * (100 / nowplaying.duration);
+		playhead_input.value = seekPosition;
+
+		let currentMinutes = Math.floor(nowplaying.currentTime / 60);
+		let currentSeconds = Math.floor(nowplaying.currentTime - currentMinutes * 60);
+
+		let durationMinutes = Math.floor(nowplaying.duration / 60);
+		let durationSeconds = Math.floor(nowplaying.duration - durationMinutes * 60);
+
+		if (currentSeconds < 10) currentSeconds = '0' + currentSeconds;
+		if (durationSeconds < 10) durationSeconds = '0' + durationSeconds;
+		if (currentMinutes < 10) currentMinutes = '0' + currentMinutes;
+		if (durationMinutes < 10) durationMinutes = '0' + durationMinutes;
+
+		currtime.textContent = `${currentMinutes}:${currentSeconds}`;
+		duration.textContent = `${durationMinutes}:${durationSeconds}`;
+	}
+}
 
 playhead_input.addEventListener('change', (e) => {
 	let value = e.target.value;
@@ -100,3 +220,5 @@ volume_input.addEventListener('input', (e) => {
 	volume_display.setAttribute('style', `width: ${percent}`);
 	volume_display.setAttribute('aria-valuenow', `width: ${percent}`);
 });
+
+loadTrack(tracknum);

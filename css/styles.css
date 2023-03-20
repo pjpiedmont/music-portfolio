@@ -179,3 +179,7 @@ i,
 span {
 	vertical-align: middle;
 }
+
+.track-name {
+	text-overflow: ellipsis;
+}
