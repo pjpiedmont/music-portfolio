@@ -19,6 +19,7 @@
 	transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 	-webkit-appearance: none;
 	appearance: none;
+	cursor: pointer;
 }
 
 .form-range::-moz-range-thumb {
@@ -31,6 +32,7 @@
 	transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 	-moz-appearance: none;
 	appearance: none;
+	cursor: pointer;
 }
 
 /* Thumb active */
@@ -44,11 +46,11 @@
 
 /* Thumb focused */
 .form-range:focus::-webkit-slider-thumb {
-	box-shadow: 0 0 0 1px var(--input-accent), 0 0 0 0.25rem var(--input-primary);
+	box-shadow: none;
 }
 
 .form-range:focus::-moz-range-thumb {
-	box-shadow: 0 0 0 1px var(--input-accent), 0 0 0 0.25rem var(--input-primary);
+	box-shadow: none;
 }
 
 /* Track styles */

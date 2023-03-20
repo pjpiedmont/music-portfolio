@@ -36,7 +36,7 @@ h1 {
 	font-family: 'Source Code Pro';
 }
 
-p {
+.lead {
 	font-family: 'Roboto Mono Light';
 }
 
@@ -90,11 +90,14 @@ textarea {
 
 #submit>h1 {
 	color: var(--accent-bg-color);
+	background-color: transparent;
 }
 
-#submit:hover,
-#submit:hover>h1 {
+#submit:hover {
 	background-color: var(--accent-bg-color);
+}
+
+#submit:hover>h1 {
 	color: var(--accent-text-color);
 }
 
@@ -112,6 +115,10 @@ textarea:focus {
 	.border-lg-start {
 		border-left: 1px solid var(--accent-bg-color);
 	}
+
+	.border-lg-bottom {
+		border-bottom: 1px solid var(--accent-bg-color);
+	}
 }
 
 .profile-pic {
@@ -124,6 +131,18 @@ textarea:focus {
 	overflow: hidden;
 	border: 1px solid var(--accent-bg-color);
 	border-radius: 10%;
+}
+
+.control,
+.song {
+	-webkit-transition: color 0.15s ease-in-out;
+	transition: color 0.15s ease-in-out;
+}
+
+#submit,
+#submit>h1 {
+	-webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+	transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
 }
 
 .control:hover {
@@ -142,9 +161,21 @@ textarea:focus {
 	z-index: -1;
 }
 
-.playhead-input {
-	top: -0.25rem;
+.form-range {
 	padding-left: 8px;
 	padding-right: 8px;
 	/* visibility: hidden; */
+}
+
+#playhead-input {
+	top: -0.25rem;
+}
+
+#volume-input {
+	top: 4px;
+}
+
+i,
+span {
+	vertical-align: middle;
 }
