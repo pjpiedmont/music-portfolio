@@ -6,6 +6,16 @@
 	border-color: var(--accent-bg-color) !important;
 }
 
+.border-black {
+	border-color: #000 !important;
+	border-width: 2px !important;
+}
+
+a:hover {
+	background-color: #000;
+	color: var(--accent-bg-color);
+}
+
 .bg-accent {
 	background-color: var(--accent-bg-color);
 }
