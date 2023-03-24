@@ -23,16 +23,6 @@ const playbtnlist = Array.from(document.querySelectorAll('.bi-play'));
 
 const tracklist = [
 	{
-		name: "Saturday Snowfall",
-		image: "../assets/images/album placeholder.png",
-		path: "../assets/audio/albums/Solace and Respite/dad 01.01.mp3"
-	},
-	// {
-	// 	name: "---",
-	// 	image: "../assets/images/album placeholder.png",
-	// 	path: "../assets/audio/albums/Solace and Respite/dad 01.01.mp3"
-	// },
-	{
 		name: "Evolvy Bugs",
 		image: "../assets/images/EvolvyBugs.png",
 		path: "../assets/audio/albums/Evolvy Bugs/01 Evolvy Bugs.mp3"
@@ -82,6 +72,16 @@ const tracklist = [
 		image: "../assets/images/EvolvyBugs.png",
 		path: "../assets/audio/albums/Evolvy Bugs/10 Evolution Always Wins.mp3"
 	},
+	{
+		name: "Saturday Snowfall",
+		image: "../assets/images/album placeholder.png",
+		path: "../assets/audio/albums/Solace and Respite/dad 01.01.mp3"
+	},
+	// {
+	// 	name: "---",
+	// 	image: "../assets/images/album placeholder.png",
+	// 	path: "../assets/audio/albums/Solace and Respite/dad 01.01.mp3"
+	// },
 	{
 		name: "Underflow",
 		image: "../assets/images/album placeholder.png",
