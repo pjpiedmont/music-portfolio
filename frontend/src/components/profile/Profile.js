@@ -1,3 +1,26 @@
+/**
+ * Profile.js
+ *
+ * Defines the profile section of the website. Includes a profile picture,
+ * a description, and a list of social media links.
+ *
+ * img: object:
+ * 	{
+ * 		src: string
+ * 		alt: string
+ * 	}
+ * name: string
+ * title: string
+ * description: string
+ * socials: array of objects:
+ * 	[
+ * 		{
+ * 			href: string
+ * 			icon: string
+ * 		}
+ * 	]
+ */
+
 import ProfileDescription from './ProfileDescription'
 import ProfilePicture from './ProfilePicture'
 

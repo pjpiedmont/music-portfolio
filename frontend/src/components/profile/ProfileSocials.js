@@ -1,3 +1,17 @@
+/**
+ * ProfileSocials.js
+ *
+ * Defines a list of social media links using icons.
+ *
+ * socials: array of objects:
+ * 	[
+ * 		{
+ * 			href: string
+ * 			icon: string
+ * 		}
+ * 	]
+ */
+
 const ProfileSocials = ({ socials }) => {
 	const socialsList = socials.map((social) => (
 		<a href={social.href} target="_blank" rel="noreferrer">

@@ -1,6 +1,15 @@
+/**
+ * ProfilePictures.js
+ *
+ * Defines the profile picture.
+ *
+ * src: string
+ * alt: string
+ */
+
 const ProfilePicture = ({ src, alt }) => {
 	return (
-		<div className="container profile-pic p-0">
+		<div>
 			<img src={src} alt={alt}></img>
 		</div>
 	)
