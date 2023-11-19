@@ -1,0 +1,14 @@
+$navbar-height: 88px;
+
+#app {
+  min-height: 100vh;
+}
+
+main {
+  min-height: 100vh;
+  padding-top: $navbar-height - 1px;
+}
+
+.nav {
+  height: $navbar-height;
+}

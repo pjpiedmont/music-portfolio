@@ -1,0 +1,37 @@
+<script setup lang="ts">
+defineProps<{
+	name?: string;
+}>();
+</script>
+
+<!----------------------------------------------------------------------------->
+
+<template>
+	<div class="container my-5 rounded-4 overflow-hidden border">
+		<div v-if="name" class="row p-0 border-bottom">
+			<div class="col-12 p-3">
+				<h1 class="text-center">{{ name }}</h1>
+			</div>
+		</div>
+
+		<slot></slot>
+	</div>
+</template>
+
+<!----------------------------------------------------------------------------->
+
+<style scoped lang="scss">
+@import '@/assets/scss/variables/colors.scss';
+@import '@/assets/scss/variables/fonts.scss';
+
+.container {
+	border-color: $color-primary !important;
+}
+
+.row {
+	background-color: $color-primary;
+	font-family: $font-heading;
+	color: $color-background;
+	border-color: $color-primary;
+}
+</style>
