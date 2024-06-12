@@ -30,9 +30,9 @@ defineProps<{
 }
 
 .row {
-	background-color: $color-primary;
-	font-family: $font-heading;
-	color: $color-background;
+	// background-color: $color-primary;
+	font-family: 'Euclid Circular A Bold';
+	color: $color-primary;
 	border-color: $color-primary;
 }
 </style>

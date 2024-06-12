@@ -8,13 +8,13 @@ import ProfileSection from '@/components/Profile/ProfileSection.vue';
 <template>
 	<main>
 		<SectionTemplate>
-			<ProfileSection
-				name="Parker Piedmont"
-				title="Composer, Producer, Programmer - Seattle"
-			/>
+			<ProfileSection name="Parker Piedmont"
+				title="Composer, Producer, Programmer - Seattle" />
 		</SectionTemplate>
 
 		<SectionTemplate name="Evolvy Bugs"> </SectionTemplate>
+
+		<SectionTemplate name="Contact"></SectionTemplate>
 	</main>
 </template>
 

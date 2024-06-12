@@ -51,10 +51,10 @@ const socials: Social[] = [
 				<h1 class="display-4 fw-bold lh-1 bg-accent">Parker Piedmont</h1>
 				<hr />
 				<p class="lead">Electro-Acoustic Music Enthusiast</p>
-				<p>Hi, I'm Parker! As you may have guessed, I like to make music. While
-					I find it difficult to succinctly sum up the kind of
-					music I make, I would describe it as a mash-up of elements from jazz,
-					synthwave, and video game soundtracks. I'm especially fond of
+				<p>Hi, I'm Parker! I like to make music. Obviously. The music I make is
+					sort of a mash-up of elements from jazz, synthwave, and video game
+					soundtracks. That's the most succinct description I've managed to come
+					up with so far. &nbsp; ¯\_(ツ)_/¯ &nbsp; I'm especially fond of
 					synthesizers, which perfectly blend my backgrounds in computer
 					engineering and saxophone performance. In my free time, I can be found
 					turning knobs half a degree to get the sound *just right*.
