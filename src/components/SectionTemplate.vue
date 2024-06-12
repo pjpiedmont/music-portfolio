@@ -7,7 +7,7 @@ defineProps<{
 <!----------------------------------------------------------------------------->
 
 <template>
-	<div class="container my-5 rounded-4 overflow-hidden border">
+	<div class="my-5 rounded-4 overflow-hidden border">
 		<div v-if="name" class="row p-0 border-bottom">
 			<div class="col-12 p-3">
 				<h1 class="text-center">{{ name }}</h1>
