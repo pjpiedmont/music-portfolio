@@ -19,11 +19,11 @@ const socials: Social[] = [
 		icon: 'envelope-fill',
 		id: 0,
 	},
-	{
-		href: 'https://www.linkedin.com/in/parkerpiedmont/',
-		icon: 'linkedin',
-		id: 1,
-	},
+	// {
+	// 	href: 'https://www.linkedin.com/in/parkerpiedmont/',
+	// 	icon: 'linkedin',
+	// 	id: 1,
+	// },
 	{
 		href: 'https://discordapp.com/users/232967632897179648',
 		icon: 'discord',
@@ -34,11 +34,11 @@ const socials: Social[] = [
 		icon: 'instagram',
 		id: 3,
 	},
-	{
-		href: 'https://twitter.com/parkerpiedmont',
-		icon: 'twitter',
-		id: 4,
-	},
+	// {
+	// 	href: 'https://twitter.com/parkerpiedmont',
+	// 	icon: 'twitter',
+	// 	id: 4,
+	// },
 ];
 </script>
 
@@ -53,22 +53,25 @@ const socials: Social[] = [
 				<p class="lead">Electro-Acoustic Music Enthusiast</p>
 				<p>Hi, I'm Parker! I like to make music. Obviously. The music I make is
 					sort of a mash-up of elements from jazz, synthwave, and video game
-					soundtracks. That's the most succinct description I've managed to come
-					up with so far. &nbsp; ¯\_(ツ)_/¯ &nbsp; I'm especially fond of
+					soundtracks. (Let me know if you can describe it more succinctly than
+					that. I never quite know how to describe my music when someone asks me
+					about it.) I'm especially fond of
 					synthesizers, which perfectly blend my backgrounds in computer
 					engineering and saxophone performance. In my free time, I can be found
-					turning knobs half a degree to get the sound *just right*.
+					rearranging and redecorating just about everything in my house. As
+					they say, <em>"if it ain't broke, break it."</em>
 				</p>
-				<p>I'm especially fond of film and game soundtracks, and I've even
+				<p>I love film and game soundtracks, and I've even
 					written a game soundtrack in the past! If you are in need of a score
 					for your project and vibe with my music, please don't hesitate to
 					reach out to me at one of the social links below. I'd love to work
 					with you!
 				</p>
-				<p class="mb-lg-0">
+				<a id="contact" class="lead" href="#">Contact Me</a>
+				<!-- <p class="mb-lg-0">
 					<ProfileSocial v-for="social in socials" :href="social.href"
 						:icon="social.icon" :key="social.id" />
-				</p>
+				</p> -->
 			</div>
 		</div>
 	</div>
@@ -117,5 +120,21 @@ hr {
 	border: 1px solid white;
 	border-radius: 1px;
 	overflow: hidden;
+}
+
+#contact {
+	display: block;
+	width: 100%;
+	border: 1px solid rgba(255, 255, 255, 0.5);
+	border-radius: 10px;
+	padding: 10px;
+	color: white;
+	text-decoration: none;
+	text-align: center;
+
+	&:hover {
+		color: black;
+		background-color: white;
+	}
 }
 </style>
