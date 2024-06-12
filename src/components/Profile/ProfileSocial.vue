@@ -24,12 +24,14 @@ i {
 }
 
 a {
-	color: $color-background;
+	color: white;
 	margin: 0 5px;
+	border: 1px solid transparent;
 
 	&:hover {
-		background-color: $color-background;
+		// background-color: $color-background;
 		color: $color-primary;
+		border-color: $color-primary;
 	}
 }
 </style>

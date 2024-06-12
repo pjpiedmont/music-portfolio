@@ -25,7 +25,8 @@ defineProps<{
 @import '@/assets/scss/variables/fonts.scss';
 
 .container {
-	border-color: $color-primary !important;
+	// border-color: $color-primary !important;
+	border-color: rgba(255, 255, 255, 0.5) !important;
 }
 
 .row {
