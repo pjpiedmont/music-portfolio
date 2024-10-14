@@ -25,38 +25,37 @@ const tracklist = [
 	{
 		name: "Track 0",
 		image: "../assets/images/unnamed_album.png",
-		path: "../assets/audio/albums/unnamed/underflow v1.5.aif"
+		path: "../assets/audio/albums/unnamed/01 underflow.mp3"
 	},
 	{
 		name: "Track 1",
 		image: "../assets/images/unnamed_album.png",
-		path: "../assets/audio/albums/unnamed/7 8 v1.16.aif"
+		path: "../assets/audio/albums/unnamed/02 mr biebbobb.mp3"
 	},
 	{
 		name: "Track 2",
 		image: "../assets/images/unnamed_album.png",
-		path: "../assets/audio/albums/unnamed/forgot to turn off the oven v1.10.mp3"
+		path: "../assets/audio/albums/unnamed/03 7 8.mp3"
 	},
 	{
 		name: "Track 3",
 		image: "../assets/images/unnamed_album.png",
-		path: "../assets/audio/albums/unnamed/mr biebbobb v1.16.1.mp3"
+		path: "../assets/audio/albums/unnamed/04 aqueous lofi.mp3"
 	},
-
 	{
 		name: "Track 4",
 		image: "../assets/images/unnamed_album.png",
-		path: "../assets/audio/albums/unnamed/outatime v1.10.2.aif"
+		path: "../assets/audio/albums/unnamed/05 outatime.mp3"
 	},
 	{
 		name: "Track 5",
 		image: "../assets/images/unnamed_album.png",
-		path: "../assets/audio/albums/unnamed/the wanderer v1.2.mp3"
+		path: "../assets/audio/albums/unnamed/06 the wanderer.mp3"
 	},
 	{
 		name: "Track 6",
 		image: "../assets/images/unnamed_album.png",
-		path: "../assets/audio/albums/unnamed/light the way v1.22.1.aif"
+		path: "../assets/audio/albums/unnamed/07 light the way.mp3"
 	},
 	{
 		name: "Evolvy Bugs",
