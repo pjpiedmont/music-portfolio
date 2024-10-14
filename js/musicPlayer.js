@@ -23,6 +23,42 @@ const playbtnlist = Array.from(document.querySelectorAll('.bi-play'));
 
 const tracklist = [
 	{
+		name: "Track 0",
+		image: "../assets/images/unnamed_album.png",
+		path: "../assets/audio/albums/unnamed/underflow v1.5.aif"
+	},
+	{
+		name: "Track 1",
+		image: "../assets/images/unnamed_album.png",
+		path: "../assets/audio/albums/unnamed/7 8 v1.16.aif"
+	},
+	{
+		name: "Track 2",
+		image: "../assets/images/unnamed_album.png",
+		path: "../assets/audio/albums/unnamed/forgot to turn off the oven v1.10.mp3"
+	},
+	{
+		name: "Track 3",
+		image: "../assets/images/unnamed_album.png",
+		path: "../assets/audio/albums/unnamed/mr biebbobb v1.16.1.mp3"
+	},
+
+	{
+		name: "Track 4",
+		image: "../assets/images/unnamed_album.png",
+		path: "../assets/audio/albums/unnamed/outatime v1.10.2.aif"
+	},
+	{
+		name: "Track 5",
+		image: "../assets/images/unnamed_album.png",
+		path: "../assets/audio/albums/unnamed/the wanderer v1.2.mp3"
+	},
+	{
+		name: "Track 6",
+		image: "../assets/images/unnamed_album.png",
+		path: "../assets/audio/albums/unnamed/light the way v1.22.1.aif"
+	},
+	{
 		name: "Evolvy Bugs",
 		image: "../assets/images/EvolvyBugs.png",
 		path: "../assets/audio/albums/Evolvy Bugs/01 Evolvy Bugs.mp3"
@@ -76,22 +112,22 @@ const tracklist = [
 		name: "Saturday Snowfall",
 		image: "../assets/images/album placeholder.png",
 		path: "../assets/audio/albums/Solace and Respite/dad 01.01.mp3"
-	},
+	}//,
 	// {
 	// 	name: "---",
 	// 	image: "../assets/images/album placeholder.png",
 	// 	path: "../assets/audio/albums/Solace and Respite/dad 01.01.mp3"
 	// },
-	{
-		name: "Underflow",
-		image: "../assets/images/album placeholder.png",
-		path: "../assets/audio/singles/underflow.mp3"
-	},
-	{
-		name: "Flux Pulse",
-		image: "../assets/images/album placeholder.png",
-		path: "../assets/audio/singles/flux pulse.mp3"
-	}
+	// {
+	// 	name: "Underflow",
+	// 	image: "../assets/images/album placeholder.png",
+	// 	path: "../assets/audio/singles/underflow.mp3"
+	// },
+	// {
+	// 	name: "Flux Pulse",
+	// 	image: "../assets/images/album placeholder.png",
+	// 	path: "../assets/audio/singles/flux pulse.mp3"
+	// }
 ]
 
 let tracknum = 0;
