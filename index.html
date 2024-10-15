@@ -20,7 +20,7 @@
 	<link href="css/styles.css" rel="stylesheet">
 </head>
 
-<body data-bs-theme="dark" class="font-monospace">
+<body data-bs-theme="dark" class="bg-main font-monospace">
 
 	<nav class="navbar fixed-top navbar-expand-lg overflow-hidden p-0">
 		<div class="container-fluid">
@@ -28,40 +28,53 @@
 		</div>
 	</nav>
 
-	<main class="py-lg-5 py-3 bg-main">
+	<main class="py-lg-5 px-lg-0 p-4 container">
 
-		<section class="container-fluid">
-			<div class="container mb-5 p-0 rounded-3 overflow-hidden border">
-				<div class="row p-4 p-md-5 rounded text-body-emphasis"
-					style="background-image: url('assets/images/unnamed_album.png'); background-size: cover;">
-					<div
-						class="col-lg-6 p-4 rounded-3 bg-body-secondary border bg-opacity-75"
-						style="box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.25)">
-						<h1>Parker Piedmont</h1>
-						<p class="lead">Computer Music Man</p>
-						<hr>
-						<p>I'm a composer, producer, and software engineer in the
-							Seattle area. I started my musical journey as a saxophonist
-							but soon developed a taste for the more artificial sounds of
-							synthesizers. I've been writing music since I graduated high
-							school, and I love to combine the organic elements of my
-							saxophone performance background with the mechanical
-							elements of electronic music. Sort of a
-							both-halves-of-the-brain thing, you know? Anyway, in my free
-							time, I can be found stirring up trouble in my D&D campaign
-							and trying new restaurants around Seattle.</p>
-						<p class="mb-lg-0">
-							<a href="mailto:parker@parkerpiedmont.com" target="_blank"
-								class="p-2 rounded-2"><i class="bi-envelope-fill"></i></a>
-							<a href="https://www.linkedin.com/in/parkerpiedmont/"
-								target="_blank" class="p-2 rounded-2"><i
-									class="bi-linkedin"></i></a>
-							<a href="https://discordapp.com/users/232967632897179648"
-								target="_blank" class="p-2 rounded-2"><i
-									class="bi-discord"></i></a>
-							<a href="https://instagram.com/pjpiedmont" target="_blank"
-								class="p-2 rounded-2"><i class="bi-instagram"></i></a>
-							<!-- <p class="lead my-3">Multiple lines of text that form the lede,
+		<section class="mb-5 p-0 rounded-3 overflow-hidden border">
+			<div class="row p-4 p-md-5 text-body-emphasis"
+				style="background-image: url('assets/images/unnamed_album.png'); background-size: cover; background-position: center;">
+
+				<div class="col-lg-6 p-0">
+					<div class="container p-0" style="height: 100%">
+						<div class="row p-5 align-items-center" style="height: 100%">
+							<div class="col-lg-10 offset-lg-1 p-0">
+								<div class="container profile-pic p-0"
+									style="box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.35)">
+									<img src="assets/images/tulips.jpeg"
+										alt="Portrait of Parker Piedmont">
+								</div>
+							</div> <!-- col -->
+						</div> <!-- row -->
+					</div> <!-- container -->
+				</div> <!-- col -->
+
+				<div class="col-lg-6 p-4 rounded-3 bg-body-secondary border"
+					style="box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.35)">
+					<h1>Parker Piedmont</h1>
+					<p class="lead">Computer Music Man</p>
+					<hr>
+					<p>I'm a composer, producer, and software engineer in the
+						Seattle area. I started my musical journey as a saxophonist
+						but soon developed a taste for the more artificial sounds of
+						synthesizers. I've been writing music since I graduated high
+						school, and I love to combine the organic elements of my
+						saxophone performance background with the mechanical
+						elements of electronic music. Sort of a
+						both-halves-of-the-brain thing, you know? Anyway, in my free
+						time, I can be found stirring up trouble in my D&D campaign
+						and trying new restaurants around Seattle.</p>
+					<p class="mb-lg-0">
+						<a href="mailto:parker@parkerpiedmont.com" target="_blank"
+							class="p-2 rounded-2"><i class="bi-envelope-fill"></i></a>
+						<a href="https://www.linkedin.com/in/parkerpiedmont/"
+							target="_blank" class="p-2 rounded-2"><i
+								class="bi-linkedin"></i></a>
+						<a href="https://discordapp.com/users/232967632897179648"
+							target="_blank" class="p-2 rounded-2"><i
+								class="bi-discord"></i></a>
+						<a href="https://instagram.com/pjpiedmont" target="_blank"
+							class="p-2 rounded-2"><i class="bi-instagram"></i></a>
+						<!-- <p class="lead my-3">Multiple lines of text that form the lede,
 							informing
 							new readers quickly and efficiently about what’s most interesting
 							in this
@@ -69,25 +82,10 @@
 						<p class="lead mb-0"><a href="#"
 								class="text-body-emphasis fw-bold">Continue
 								reading...</a></p> -->
-					</div> <!-- col -->
+				</div> <!-- col -->
 
-					<div class="col-lg-6 p-0">
-						<div class="container p-0" style="height: 100%">
-							<div class="row p-5 align-items-center" style="height: 100%">
-								<div class="col-lg-8 offset-lg-2 p-0">
-									<div class="container profile-pic p-0"
-										style="box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.25)">
-										<img src="assets/images/tulips.jpeg"
-											alt="Portrait of Parker Piedmont">
-									</div>
-								</div> <!-- col -->
-							</div> <!-- row -->
-						</div> <!-- container -->
-					</div> <!-- col -->
-
-				</div>
-			</div> <!-- container -->
-		</section>
+			</div> <!-- row -->
+		</section> <!-- hero -->
 
 		<!-- <section class="py-5 text-center container">
 			<div class="row py-lg-5">
@@ -107,73 +105,65 @@
 			</div>
 		</section> -->
 
-		<section class="container-fluid">
-
-			<div class="container mb-5 border rounded-3 overflow-hidden">
-				<div class="row p-0">
-					<div
-						class="col-12 p-3 text-center border-bottom bg-accent color-accent">
-						<h1>Albums</h1>
-					</div> <!-- col -->
-				</div> <!-- row -->
+		<section>
+			<!-- heading -->
+			<div class="mb-5 py-3 text-center">
+				<h1 style="color: var(--accent-bg-color);">Albums</h1>
 			</div>
 
-			<div class="container">
+			<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 p-0 g-5">
 
-				<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 p-0 g-3">
-
-					<div class="col">
-						<div class="card shadow-sm border rounded-3 overflow-hidden">
-							<img src="assets/images/unnamed_album.png"
-								style="border-bottom: 1px solid var(--accent-bg-color);">
-							<div class="card-body">
-								<p class="card-text">New album incoming!</p>
-								<!-- <div class="d-flex justify-content-between align-items-center">
+				<div class="col">
+					<div class="card shadow-sm border rounded-3 overflow-hidden">
+						<img src="assets/images/unnamed_album.png"
+							style="border-bottom: 1px solid var(--accent-bg-color);">
+						<div class="card-body">
+							<p class="card-text">New album incoming!</p>
+							<!-- <div class="d-flex justify-content-between align-items-center">
 									<div class="btn-group">
 										<button type="button"
 											class="btn btn-sm btn-outline-secondary">Listen</button>
 									</div>
 									<small class="text-body-secondary">9 mins</small>
 								</div> -->
-							</div>
 						</div>
 					</div>
+				</div>
 
-					<div class="col">
-						<div class="card shadow-sm border rounded-3 overflow-hidden">
-							<img src="assets/images/album placeholder.png"
-								style="border-bottom: 1px solid var(--accent-bg-color);">
-							<div class="card-body">
-								<p class="card-text">Solace and Respite</p>
-								<!-- <div class="d-flex justify-content-between align-items-center">
+				<div class="col">
+					<div class="card shadow-sm border rounded-3 overflow-hidden">
+						<img src="assets/images/album placeholder.png"
+							style="border-bottom: 1px solid var(--accent-bg-color);">
+						<div class="card-body">
+							<p class="card-text">Solace and Respite</p>
+							<!-- <div class="d-flex justify-content-between align-items-center">
 									<div class="btn-group">
 										<button type="button"
 											class="btn btn-sm btn-outline-secondary">Listen</button>
 									</div>
 									<small class="text-body-secondary">9 mins</small>
 								</div> -->
-							</div>
 						</div>
 					</div>
-					<div class="col">
-						<div class="card shadow-sm border rounded-3 overflow-hidden">
-							<img src="assets/images/EvolvyBugs.png"
-								style="border-bottom: 1px solid var(--accent-bg-color);">
-							<div class="card-body">
-								<p class="card-text">Evolvy Bugs</p>
-								<!-- <div class="d-flex justify-content-between align-items-center">
+				</div>
+				<div class="col">
+					<div class="card shadow-sm border rounded-3 overflow-hidden">
+						<img src="assets/images/EvolvyBugs.png"
+							style="border-bottom: 1px solid var(--accent-bg-color);">
+						<div class="card-body">
+							<p class="card-text">Evolvy Bugs</p>
+							<!-- <div class="d-flex justify-content-between align-items-center">
 									<div class="btn-group">
 										<button type="button"
 											class="btn btn-sm btn-outline-secondary">Listen</button>
 									</div>
 									<small class="text-body-secondary">9 mins</small>
 								</div> -->
-							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</section>
+		</section> <!-- album grid -->
 
 		<!-- Compositions -->
 		<section class="container-fluid">
