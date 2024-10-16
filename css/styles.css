@@ -120,6 +120,11 @@ textarea:focus {
 	outline: none;
 }
 
+#hero {
+	border: 1px solid var(--accent-bg-color);
+	border-radius: 0.5rem;
+}
+
 @media (min-width: 992px) {
 	.border-lg-start {
 		border-left: 1px solid var(--accent-bg-color);
@@ -128,12 +133,12 @@ textarea:focus {
 	.border-lg-bottom {
 		border-bottom: 1px solid var(--accent-bg-color);
 	}
-}
 
-.profile-pic {
-	overflow: hidden;
-	border: 1px solid var(--accent-bg-color);
-	border-radius: 50%;
+	#hero {
+		border: 0;
+		border-bottom: 1px solid var(--accent-bg-color);
+		border-radius: 0;
+	}
 }
 
 .album-art {
