@@ -125,6 +125,10 @@ textarea:focus {
 	border-radius: 0.5rem;
 }
 
+#hero > .row {
+	min-height: 55rem;
+}
+
 @media (min-width: 992px) {
 	.border-lg-start {
 		border-left: 1px solid var(--accent-bg-color);
