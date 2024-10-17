@@ -223,3 +223,13 @@ a:hover {
 	color: var(--accent-bg-color);
 	border-color: var(--accent-bg-color);
 }
+
+.quick-link:hover {
+	cursor: pointer;
+	background-color: var(--accent-bg-color) !important;
+}
+
+.quick-link:hover p,
+.quick-link:hover i {
+	color: var(--accent-text-color) !important;
+}
