@@ -233,3 +233,7 @@ a:hover {
 .quick-link:hover i {
 	color: var(--accent-text-color) !important;
 }
+
+main {
+	margin-bottom: var(--footer-height);
+}
