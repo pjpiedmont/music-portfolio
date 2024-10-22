@@ -224,6 +224,52 @@ a:hover {
 	border-color: var(--accent-bg-color);
 }
 
+.album-name {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	z-index: 11;
+	color: #fff;
+	visibility: hidden;
+}
+
+.card {
+	cursor: pointer;
+}
+
+/* .card:hover {
+	cursor: pointer;
+	transform: translate(-1rem, -1rem);
+} */
+
+.card:active {
+	/* cursor: pointer; */
+	transform: translate(0.5rem, 0.5rem);
+}
+
+.card:hover:after {
+	content: " ";
+	z-index: 10;
+	display: block;
+	position: absolute;
+	height: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	background: rgba(50, 11, 65, 0.65);
+}
+
+.card:hover > .card-body {
+	color: var(--accent-text-color);
+	background-color: var(--accent-bg-color);
+}
+
+.card:hover > .album-name {
+	visibility: visible;
+}
+
 .quick-link:hover {
 	cursor: pointer;
 	background-color: var(--accent-bg-color) !important;
