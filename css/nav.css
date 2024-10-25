@@ -1,7 +1,7 @@
 nav {
 	height: calc(var(--nav-height) - 1px);
 	background-color: var(--main-bg-color);
-	border-bottom: 1px solid var(--accent-bg-color);
+	border-bottom: 2px solid var(--accent-bg-color);
 }
 
 nav>div {

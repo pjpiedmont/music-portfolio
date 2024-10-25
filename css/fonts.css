@@ -47,3 +47,16 @@
 	font-family: 'Source Code Pro Light';
 	src: url('/assets/fonts/Source Code Pro/SourceCodePro_FontsOnly-1.009/SourceCodePro-Light.ttf') format('truetype');
 }
+
+@font-face {
+	font-family: 'Porcine';
+	src: url('/assets/fonts/Porcine/Porcine-Heavy.eot');
+	src: local('Porcine Heavy'), local('Porcine-Heavy'),
+		url('/assets/fonts/Porcine/Porcine-Heavy.eot?#iefix') format('embedded-opentype'),
+		url('/assets/fonts/Porcine/Porcine-Heavy.woff2') format('woff2'),
+		url('/assets/fonts/Porcine/Porcine-Heavy.woff') format('woff'),
+		url('/assets/fonts/Porcine/Porcine-Heavy.ttf') format('truetype'),
+		url('/assets/fonts/Porcine/Porcine-Heavy.svg#Porcine-Heavy') format('svg');
+	font-weight: 900;
+	font-style: normal;
+}
