@@ -23,39 +23,39 @@ const playbtnlist = Array.from(document.querySelectorAll('.bi-play'));
 
 const tracklist = [
 	{
-		name: "Track 0",
-		image: "../assets/images/unnamed_album.png",
-		path: "../assets/audio/albums/unnamed/01 underflow.mp3"
-	},
-	{
 		name: "Track 1",
 		image: "../assets/images/unnamed_album.png",
-		path: "../assets/audio/albums/unnamed/02 mr biebbobb.mp3"
+		path: "../assets/audio/albums/unnamed/track1.mp3"
 	},
 	{
 		name: "Track 2",
 		image: "../assets/images/unnamed_album.png",
-		path: "../assets/audio/albums/unnamed/03 7 8.mp3"
+		path: "../assets/audio/albums/unnamed/track2.mp3"
 	},
 	{
 		name: "Track 3",
 		image: "../assets/images/unnamed_album.png",
-		path: "../assets/audio/albums/unnamed/04 aqueous lofi.mp3"
+		path: "../assets/audio/albums/unnamed/track3.mp3"
 	},
 	{
 		name: "Track 4",
 		image: "../assets/images/unnamed_album.png",
-		path: "../assets/audio/albums/unnamed/05 outatime.mp3"
+		path: "../assets/audio/albums/unnamed/track4.mp3"
 	},
 	{
 		name: "Track 5",
 		image: "../assets/images/unnamed_album.png",
-		path: "../assets/audio/albums/unnamed/06 the wanderer.mp3"
+		path: "../assets/audio/albums/unnamed/track5.mp3"
 	},
 	{
 		name: "Track 6",
 		image: "../assets/images/unnamed_album.png",
-		path: "../assets/audio/albums/unnamed/07 light the way.mp3"
+		path: "../assets/audio/albums/unnamed/track6.mp3"
+	},
+	{
+		name: "Track 7",
+		image: "../assets/images/unnamed_album.png",
+		path: "../assets/audio/albums/unnamed/track7.mp3"
 	},
 	{
 		name: "Saturday Snowfall",
