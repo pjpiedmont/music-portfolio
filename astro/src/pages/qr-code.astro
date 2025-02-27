@@ -1,0 +1,84 @@
+---
+import "../styles/bootstrap/bootstrap.min.css";
+import "../assets/icons/bootstrap-icons-1.10.3/bootstrap-icons.css";
+import "../styles/fonts.css";
+import "../styles/variables.css";
+import "../styles/nav.css";
+import "../styles/input-range.css";
+import "../styles/styles.css";
+
+import qrCodeImage from "../assets/images/qr-code.svg";
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Parker Piedmont | Composer & Producer</title>
+		<link href="/favicon2.ico" rel="icon" type="image/x-icon" />
+	</head>
+
+	<body data-bs-theme="dark" class="font-monospace">
+		<main class="py-lg-5 py-3 bg-main">
+			<section class="container-fluid">
+				<div class="container">
+					<div class="row p-0 rounded-3 overflow-hidden border">
+						<!-- Profile picture -->
+						<div class="col-lg-6 p-0">
+							<div class="container p-0" style="height: 100%">
+								<div class="row p-5 align-items-center" style="height: 100%">
+									<div class="col-lg-8 offset-lg-2 p-0">
+										<div class="container border rounded-3 overflow-hidden p-0">
+											<img src={qrCodeImage.src} alt="QR Code" />
+										</div>
+									</div>
+									<!-- col -->
+								</div>
+								<!-- row -->
+							</div>
+							<!-- container -->
+						</div>
+						<!-- col -->
+
+						<!-- Name and bio -->
+						<div class="col-lg-6 p-3 p-lg-5 bg-accent">
+							<div class="container" style="height: 100%">
+								<div class="row align-items-center" style="height: 100%">
+									<div class="col-12 color-accent text-center text-lg-start">
+										<h1 class="display-4 fw-bold lh-1 bg-accent">
+											Parker Piedmont
+										</h1>
+										<hr />
+										<p class="lead">Composer, Producer, Programmer - Seattle</p>
+										<p>
+											<i class="bi-globe-americas"></i>&nbsp;parkerpiedmont.com
+										</p>
+										<!-- <p><i
+											class="bi-envelope-fill"></i>&nbsp;parkerpiedmont@parkerpiedmont.com
+									</p>
+									<p><i class="bi-linkedin"></i>&nbsp;<i
+											class="bi-twitter"></i>&nbsp;@parkerpiedmont</p>
+									<p><i class="bi-instagram"></i>&nbsp;@pjpiedmont</p>
+									<p><i class="bi-discord"></i>&nbsp;@b^2#2887</p> -->
+									</div>
+									<!-- col -->
+								</div>
+								<!-- row -->
+							</div>
+							<!-- container -->
+						</div>
+						<!-- col -->
+					</div>
+					<!-- row -->
+				</div>
+				<!-- container -->
+			</section>
+		</main>
+
+		<script>
+			import "../scripts/bootstrap/bootstrap.bundle";
+			import "../scripts/musicPlayer";
+			import "../scripts/margins";
+		</script>
+	</body>
+</html>

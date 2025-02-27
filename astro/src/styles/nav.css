@@ -1,0 +1,21 @@
+nav {
+	height: calc(var(--nav-height) - 1px);
+	background-color: var(--main-bg-color);
+	border-bottom: 1px solid var(--accent-bg-color);
+}
+
+nav>div {
+	width: 100%;
+}
+
+#nav-title {
+	font-family: 'Major Mono Display';
+	color: var(--accent-bg-color);
+	font-size: 3rem;
+	font-weight: bold;
+	width: 100%;
+}
+
+#nav-title>sup {
+	font-weight: bold;
+}
