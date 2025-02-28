@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /audio/
+
+User-agent: *
+Allow: /
+
+Sitemap: https://www.parkerpiedmont.com/sitemap-index.xml
