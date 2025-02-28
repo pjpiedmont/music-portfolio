@@ -4,12 +4,12 @@ import "@styles/fonts.css";
 
 <section>
 	<div>
-		<span>Hi, my name is</span>
-
 		<h1>
-			Parker Piedmont.
+			<span id="intro">Hi, my name is</span>
 			<br />
-			I write electronic music.
+			<span id="name">Parker Piedmont.</span>
+			<br />
+			<span id="job-description">I write electronic music.</span>
 		</h1>
 
 		<p>
@@ -17,7 +17,11 @@ import "@styles/fonts.css";
 			synthwave, jazz, and EDM to tell a story.
 		</p>
 
-		<a href="#">Listen Now</a>
+		<a href="#"
+			><i class="bi bi-arrow-down"></i>
+			Listen Now
+			<i class="bi bi-arrow-down"></i>
+		</a>
 	</div>
 </section>
 
@@ -30,44 +34,48 @@ import "@styles/fonts.css";
 		justify-content: center;
 		align-items: center;
 		min-height: 75vh;
-		border-bottom: 2px solid #000;
-		// border: none;
+		padding-bottom: 40px;
 		color: #fff;
-		background: linear-gradient(
-			135deg,
-			#1f005c,
-			#5b0060,
-			#870160,
-			#ac255e,
-			#ca485c,
-			#e16b5c,
-			#f39060,
-			#ffb56b
-		);
-		// -webkit-mask: conic-gradient(
-		// 		from -45deg at bottom,
-		// 		#0000,
-		// 		#000 1deg 89deg,
-		// 		#0000 90deg
-		// 	)
-		// 	50%/80px 100%;
-	}
-
-	span {
-		display: block;
-		font-family: "IBM Plex Mono", monospace;
-		font-size: 1.1rem;
+		background: linear-gradient(135deg, #170044, #510055);
+		border: none;
+		-webkit-mask: conic-gradient(
+				from -45deg at bottom,
+				#0000,
+				#000 1deg 89deg,
+				#0000 90deg
+			)
+			50%/80px 100%;
 	}
 
 	h1 {
-		margin: 0.5rem 0 1.5rem;
+		margin-bottom: 2rem;
+	}
+
+	#intro {
+		display: inline-block;
+		margin-bottom: 1rem;
+		font-family: "IBM Plex Mono", monospace;
+		font-size: 1.1rem;
+		font-weight: 400;
+		color: #ff6fe7;
+	}
+
+	#name {
 		font-family: "Inter", sans-serif;
 		font-size: 4rem;
+		text-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+	}
+
+	#job-description {
+		color: #f3c6ac;
+		font-family: "Inter", sans-serif;
+		font-size: 4rem;
+		text-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 	}
 
 	p {
 		max-width: 450px;
-		margin-bottom: 4rem;
+		margin-bottom: 4.5rem;
 		font-family: "Inter", sans-serif;
 		font-size: 1.2rem;
 		line-height: 1.5;
@@ -75,14 +83,15 @@ import "@styles/fonts.css";
 
 	a {
 		padding: 1rem 1.75rem;
-		border: 1px solid #fff;
+		border: 1px solid #ff6fe7;
 		font-family: "IBM Plex Mono", monospace;
 		font-size: 1.2rem;
 		text-decoration: none;
-		color: inherit;
+		color: #ff6fe7;
 
 		&:hover {
-			background: #000;
+			background: #ff6fe7;
+			color: #000;
 		}
 	}
 </style>
