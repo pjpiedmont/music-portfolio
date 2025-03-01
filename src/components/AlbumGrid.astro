@@ -53,7 +53,7 @@ const placeholderAlbumArtOpt = await getImage({ src: placeholderAlbumArt });
 		align-items: stretch;
 		max-width: 1400px;
 		margin: 0 auto;
-		padding: 0;
+		padding: 0 2em;
 	}
 
 	section {
@@ -70,12 +70,9 @@ const placeholderAlbumArtOpt = await getImage({ src: placeholderAlbumArt });
 	}
 
 	.card {
-		width: calc(33% - 3em);
-		margin: 1.5em;
-
-		&:hover {
-			transform: translateY(-1em);
-		}
+		/* width: calc(33% - 3em); */
+		flex: 1 0 51%;
+		margin: 1.5em 0;
 	}
 
 	@media screen and (min-width: 400px) {
@@ -88,11 +85,24 @@ const placeholderAlbumArtOpt = await getImage({ src: placeholderAlbumArt });
 	}
 
 	@media screen and (min-width: 768px) {
+		.container {
+			padding: 0 0.5em;
+		}
+
+		.card {
+			flex-basis: 34%;
+			max-width: calc(50% - 3rem);
+			margin: 1.5rem;
+		}
 	}
 
 	@media screen and (min-width: 992px) {
 		section {
 			font-size: 20px;
+		}
+
+		.card:hover {
+			transform: translateY(-1em);
 		}
 	}
 
@@ -100,11 +110,21 @@ const placeholderAlbumArtOpt = await getImage({ src: placeholderAlbumArt });
 		section {
 			font-size: 22px;
 		}
+
+		.card {
+			flex-basis: 26%;
+		}
 	}
 
 	@media screen and (min-width: 1400px) {
 		section {
 			font-size: 24px;
+		}
+	}
+
+	@media screen and (min-width: calc(1400px + 3rem)) {
+		.container {
+			padding: 0;
 		}
 	}
 
