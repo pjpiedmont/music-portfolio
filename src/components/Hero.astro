@@ -4,7 +4,8 @@ import parker from "@assets/images/tulips.jpeg";
 const optimizedParker = await getImage({ src: parker });
 ---
 
-<section class="container">
+<!-- <section> -->
+<div id="outer" class="container full-width">
 	<img src={optimizedParker.src} alt="Portrait of Parker Piedmont" />
 	<div class="container center-children">
 		<div>
@@ -18,7 +19,7 @@ const optimizedParker = await getImage({ src: parker });
 
 			<p>
 				I'm a composer and producer in the Seattle area. I combine elements of
-				synthwave, jazz, and EDM to tell a story.
+				synthwave, jazz, and EDM to tell stories.
 			</p>
 
 			<a href="#goto">
@@ -28,170 +29,142 @@ const optimizedParker = await getImage({ src: parker });
 			</a>
 		</div>
 	</div>
+</div>
+<!-- </section> -->
 
-	<style lang="scss">
-		@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
-		@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+<style lang="scss">
+	@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+	@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
 
-		.container {
-			display: flex;
-			max-width: 100%;
+	#outer {
+		flex-direction: column;
+		min-height: min(75vh, 500px);
+		padding: 3rem 2rem;
+		color: #fff;
+		font-size: 16px;
+		background: linear-gradient(135deg, #170044, #510055);
+		border: none;
+		-webkit-mask: conic-gradient(
+				from -45deg at bottom,
+				#0000,
+				#000 1deg 89deg,
+				#0000 90deg
+			)
+			50%/3rem 100%;
+	}
 
-			&.center-children {
-				justify-content: center;
-				align-items: center;
-			}
+	img {
+		display: block;
+		max-width: min(60%, 350px);
+		margin: 0 auto;
+		object-fit: cover;
+		aspect-ratio: 1/1;
+		border: 0.1rem solid #ff6fe7;
+		border-radius: 50%;
+	}
+
+	div.container.center-children {
+		flex-grow: 1;
+		padding-bottom: 1.5rem;
+	}
+
+	h1 {
+		margin: 3rem 0 1rem;
+		font-size: 1rem;
+	}
+
+	#intro {
+		display: inline-block;
+		margin-bottom: 1rem;
+		font-family: "IBM Plex Mono", monospace;
+		font-size: 1rem;
+		font-weight: 400;
+		color: #ff6fe7;
+	}
+
+	#name {
+		font-family: "Inter", sans-serif;
+		font-size: 2.5rem;
+		word-spacing: 0.1rem;
+		text-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.5);
+	}
+
+	#job-description {
+		color: #f3c6ac;
+		font-family: "Inter", sans-serif;
+		font-size: 2.5rem;
+		word-spacing: 0.1rem;
+		text-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.5);
+	}
+
+	p {
+		max-width: 19rem;
+		margin-bottom: 2rem;
+		font-family: "Inter", sans-serif;
+		font-size: 1.125rem;
+		line-height: 1.5;
+	}
+
+	a {
+		display: inline-block;
+		padding: 0.75rem 1.5rem;
+		border: 0.1rem solid #ff6fe7;
+		font-family: "IBM Plex Mono", monospace;
+		font-size: 1.125rem;
+		text-decoration: none;
+		color: #ff6fe7;
+
+		&:hover {
+			background: #ff6fe7;
+			color: #000;
 		}
+	}
 
-		section {
-			flex-direction: column;
-			min-height: min(75vh, 500px);
-			padding: 3em 2em;
-			color: #fff;
-			font-size: 16px;
-			background: linear-gradient(135deg, #170044, #510055);
-			border: none;
-			-webkit-mask: conic-gradient(
-					from -45deg at bottom,
-					#0000,
-					#000 1deg 89deg,
-					#0000 90deg
-				)
-				50%/3em 100%;
+	@media screen and (min-width: 400px) {
+	}
+
+	@media screen and (min-width: 576px) {
+	}
+
+	@media screen and (min-width: 768px) {
+		#outer {
+			flex-direction: row;
+			padding: 0;
 		}
 
 		img {
-			display: block;
-			max-width: min(60%, 350px);
-			margin: 0 auto;
-			object-fit: cover;
-			aspect-ratio: 1/1;
-			border: 0.1em solid #ff6fe7;
-			border-radius: 50%;
+			max-width: 35%;
+			border: none;
+			border-radius: 0%;
 		}
 
 		div.container.center-children {
-			flex-grow: 1;
-			padding-bottom: 1.5em;
+			padding: 3rem;
+			padding-bottom: calc(3rem + 20px);
+			background: linear-gradient(135deg, #170044, #510055);
 		}
 
 		h1 {
-			margin: 3em 0 1em;
-			font-size: 1em;
+			margin-top: 0;
 		}
+	}
 
-		#intro {
-			display: inline-block;
-			margin-bottom: 1em;
-			font-family: "IBM Plex Mono", monospace;
-			font-size: 1em;
-			font-weight: 400;
-			color: #ff6fe7;
+	@media screen and (min-width: 992px) {
+		div.container.center-children {
+			padding: 5rem;
+			padding-bottom: calc(5rem + 20px);
 		}
+	}
 
-		#name {
-			font-family: "Inter", sans-serif;
-			font-size: 2.5em;
-			word-spacing: 0.1em;
-			text-shadow: 0 0.25em 1em rgba(0, 0, 0, 0.5);
-		}
+	@media screen and (min-width: 1200px) {
+	}
 
-		#job-description {
-			color: #f3c6ac;
-			font-family: "Inter", sans-serif;
-			font-size: 2.5em;
-			word-spacing: 0.1em;
-			text-shadow: 0 0.25em 1em rgba(0, 0, 0, 0.5);
-		}
+	@media screen and (min-width: 1400px) {
+	}
 
-		p {
-			max-width: 19em;
-			margin-bottom: 2em;
-			font-family: "Inter", sans-serif;
-			font-size: 1.125em;
-			line-height: 1.5;
-		}
+	@media screen and (min-width: 2000px) {
+	}
 
-		a {
-			display: inline-block;
-			padding: 0.75em 1.5em;
-			border: 0.1em solid #ff6fe7;
-			font-family: "IBM Plex Mono", monospace;
-			font-size: 1.125em;
-			text-decoration: none;
-			color: #ff6fe7;
-
-			&:hover {
-				background: #ff6fe7;
-				color: #000;
-			}
-		}
-
-		@media screen and (min-width: 400px) {
-		}
-
-		@media screen and (min-width: 576px) {
-			section {
-				font-size: 18px;
-			}
-		}
-
-		@media screen and (min-width: 768px) {
-			section {
-				flex-direction: row;
-				padding: 0;
-			}
-
-			img {
-				max-width: 35%;
-				border: none;
-				border-radius: 0%;
-			}
-
-			div.container.center-children {
-				padding: 3em;
-				padding-bottom: calc(3em + 20px);
-				background: linear-gradient(135deg, #170044, #510055);
-			}
-
-			h1 {
-				margin-top: 0;
-			}
-		}
-
-		@media screen and (min-width: 992px) {
-			section {
-				font-size: 20px;
-			}
-
-			div.container.center-children {
-				padding: 5em;
-				padding-bottom: calc(5em + 20px);
-			}
-		}
-
-		@media screen and (min-width: 1200px) {
-			section {
-				font-size: 22px;
-			}
-		}
-
-		@media screen and (min-width: 1400px) {
-			section {
-				font-size: 24px;
-			}
-		}
-
-		@media screen and (min-width: 2000px) {
-			section {
-				font-size: 28px;
-			}
-		}
-
-		@media screen and (min-width: 3000px) {
-			section {
-				font-size: 34px;
-			}
-		}
-	</style>
-</section>
+	@media screen and (min-width: 3000px) {
+	}
+</style>
