@@ -37,7 +37,7 @@ const { title, year, imageSrc, imageAlt } = Astro.props;
 		height: 100%;
 		flex-direction: column;
 		background-color: #212529;
-		border: 0.1em solid rgba(255, 255, 255, 0.15);
+		border: 0.1rem solid rgba(255, 255, 255, 0.15);
 		font-family: "IBM Plex Mono", monospace;
 
 		&:hover {
@@ -67,20 +67,20 @@ const { title, year, imageSrc, imageAlt } = Astro.props;
 		display: flex;
 		align-items: center;
 		flex-grow: 1;
-		border-top: 0.1em solid rgba(255, 255, 255, 0.15);
+		border-top: 0.1rem solid rgba(255, 255, 255, 0.15);
 	}
 
 	.actions {
 		display: flex;
-		border-top: 0.1em solid rgba(255, 255, 255, 0.15);
+		border-top: 0.1rem solid rgba(255, 255, 255, 0.15);
 	}
 
 	span,
 	a {
 		display: block;
-		padding: 1.25em 1.25em;
+		padding: 1.25rem 1.25rem;
 		color: rgba(255, 255, 255, 0.5);
-		font-size: 1em;
+		font-size: 1rem;
 	}
 
 	.title,
@@ -92,12 +92,44 @@ const { title, year, imageSrc, imageAlt } = Astro.props;
 		text-decoration: none;
 
 		&.explore {
-			border-left: 0.1em solid rgba(255, 255, 255, 0.15);
+			border-left: 0.1rem solid rgba(255, 255, 255, 0.15);
 		}
 
 		&:hover {
 			background: #ff6fe7;
 			color: #000 !important;
 		}
+	}
+
+	@media screen and (min-width: 400px) {
+	}
+
+	@media screen and (min-width: 576px) {
+	}
+
+	@media screen and (min-width: 768px) {
+	}
+
+	@media screen and (min-width: 992px) {
+		span,
+		a {
+			padding: 0.75rem 1.25rem;
+		}
+	}
+
+	@media screen and (min-width: 1200px) {
+		span,
+		a {
+			font-size: 0.8rem;
+		}
+	}
+
+	@media screen and (min-width: 1400px) {
+	}
+
+	@media screen and (min-width: 2000px) {
+	}
+
+	@media screen and (min-width: 3000px) {
 	}
 </style>
