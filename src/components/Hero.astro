@@ -1,7 +1,5 @@
 ---
 import { getImage } from "astro:assets";
-import "@styles/fonts.css";
-
 import parker from "@assets/images/tulips.jpeg";
 const optimizedParker = await getImage({ src: parker });
 ---
@@ -23,8 +21,8 @@ const optimizedParker = await getImage({ src: parker });
 				synthwave, jazz, and EDM to tell a story.
 			</p>
 
-			<a href="#goto"
-				><i class="bi bi-arrow-down"></i>
+			<a href="#goto">
+				<i class="bi bi-arrow-down"></i>
 				Listen Now
 				<i class="bi bi-arrow-down"></i>
 			</a>
@@ -47,7 +45,7 @@ const optimizedParker = await getImage({ src: parker });
 
 		section {
 			flex-direction: column;
-			min-height: 75vh;
+			min-height: min(75vh, 500px);
 			padding: 3em 2em;
 			color: #fff;
 			font-size: 16px;
