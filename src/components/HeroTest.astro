@@ -46,9 +46,12 @@ const optimizedParker = await getImage({ src: parker });
 		}
 
 		section {
+			flex-direction: column;
 			min-height: 75vh;
-			padding: 0;
+			padding: 3em 2em;
 			color: #fff;
+			font-size: 16px;
+			background: linear-gradient(135deg, #170044, #510055);
 			border: none;
 			-webkit-mask: conic-gradient(
 					from -45deg at bottom,
@@ -56,66 +59,140 @@ const optimizedParker = await getImage({ src: parker });
 					#000 1deg 89deg,
 					#0000 90deg
 				)
-				50%/80px 100%;
+				50%/3em 100%;
 		}
 
 		img {
 			display: block;
-			max-width: 35%;
+			max-width: min(60%, 200px);
+			margin: 0 auto;
 			object-fit: cover;
+			aspect-ratio: 1/1;
+			border: 0.1em solid #ff6fe7;
+			border-radius: 50%;
 		}
 
 		div.container.center-children {
 			flex-grow: 1;
-			padding-bottom: 40px;
-			background: linear-gradient(135deg, #170044, #510055);
+			padding-bottom: 1.5em;
 		}
 
 		h1 {
-			margin-bottom: 2rem;
+			margin: 3em 0 1em;
+			font-size: 1em;
 		}
 
 		#intro {
 			display: inline-block;
-			margin-bottom: 1rem;
+			margin-bottom: 1em;
 			font-family: "IBM Plex Mono", monospace;
-			font-size: 1.1rem;
+			font-size: 0.8em;
 			font-weight: 400;
 			color: #ff6fe7;
 		}
 
 		#name {
 			font-family: "Inter", sans-serif;
-			font-size: 4rem;
-			text-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+			font-size: 2em;
+			word-spacing: 0.1em;
+			text-shadow: 0 0.25em 1em rgba(0, 0, 0, 0.5);
 		}
 
 		#job-description {
 			color: #f3c6ac;
 			font-family: "Inter", sans-serif;
-			font-size: 4rem;
-			text-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+			font-size: 2em;
+			word-spacing: 0.1em;
+			text-shadow: 0 0.25em 1em rgba(0, 0, 0, 0.5);
 		}
 
 		p {
-			max-width: 450px;
-			margin-bottom: 4.5rem;
+			max-width: 19em;
+			margin-bottom: 2em;
 			font-family: "Inter", sans-serif;
-			font-size: 1.2rem;
+			font-size: 0.9em;
 			line-height: 1.5;
 		}
 
 		a {
-			padding: 1rem 1.75rem;
-			border: 1px solid #ff6fe7;
+			display: inline-block;
+			padding: 0.75em 1.5em;
+			border: 0.1em solid #ff6fe7;
 			font-family: "IBM Plex Mono", monospace;
-			font-size: 1.2rem;
+			font-size: 0.9em;
 			text-decoration: none;
 			color: #ff6fe7;
 
 			&:hover {
 				background: #ff6fe7;
 				color: #000;
+			}
+		}
+
+		@media screen and (min-width: 400px) {
+		}
+
+		@media screen and (min-width: 576px) {
+			section {
+				font-size: 18px;
+			}
+		}
+
+		@media screen and (min-width: 768px) {
+			section {
+				flex-direction: row;
+				padding: 0;
+			}
+
+			img {
+				max-width: 35%;
+				border: none;
+				border-radius: 0%;
+			}
+
+			div.container.center-children {
+				padding: 3em;
+				padding-bottom: calc(3em + 20px);
+				background: linear-gradient(135deg, #170044, #510055);
+			}
+
+			h1 {
+				margin-top: 0;
+			}
+		}
+
+		@media screen and (min-width: 992px) {
+			section {
+				font-size: 20px;
+			}
+
+			div.container.center-children {
+				padding: 5em;
+				padding-bottom: calc(5em + 20px);
+			}
+		}
+
+		@media screen and (min-width: 1200px) {
+			section {
+				font-size: 22px;
+			}
+		}
+
+		@media screen and (min-width: 1400px) {
+			section {
+				font-size: 24px;
+			}
+		}
+
+		@media screen and (min-width: 2000px) {
+			section {
+				font-size: 28px;
+			}
+		}
+
+		@media screen and (min-width: 3000px) {
+			section {
+				font-size: 34px;
 			}
 		}
 	</style>
