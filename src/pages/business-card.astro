@@ -1,13 +1,12 @@
 ---
-import "../styles/bootstrap/bootstrap.min.css";
-import "../assets/icons/bootstrap-icons-1.10.3/bootstrap-icons.css";
-import "../styles/fonts.css";
-import "../styles/variables.css";
-import "../styles/nav.css";
-import "../styles/input-range.css";
-import "../styles/styles.css";
+import "@styles/bootstrap/bootstrap.min.css";
+import "@styles/fonts.css";
+import "@styles/variables.css";
+import "@styles/nav.css";
+import "@styles/input-range.css";
+import "@styles/styles.css";
 
-import qrCodeImage from "../assets/images/qr-code.svg";
+import qrCodeImage from "@assets/images/qr-code.svg";
 ---
 
 <html lang="en">
@@ -19,7 +18,11 @@ import qrCodeImage from "../assets/images/qr-code.svg";
 			name="description"
 			content="Parker Piedmont is a composer and producer located in the Seattle area. He writes electronic music, using combining synthesizers with occasional acoustic instruments for a distinct electroacoustic sound."
 		/>
-		<link href="/favicon2.ico" rel="icon" type="image/x-icon" />
+		<link href="/favicon.ico" rel="icon" type="image/x-icon" />
+		<link
+			href="/icons/bootstrap-icons-1.10.3/bootstrap-icons.css"
+			rel="stylesheet"
+		/>
 	</head>
 
 	<body data-bs-theme="dark" class="font-monospace">
@@ -81,9 +84,9 @@ import qrCodeImage from "../assets/images/qr-code.svg";
 		</main>
 
 		<script>
-			import "../scripts/bootstrap/bootstrap.bundle";
-			import "../scripts/musicPlayer";
-			import "../scripts/margins";
+			import "@scripts/bootstrap/bootstrap.bundle";
+			import "@scripts/musicPlayer";
+			import "@scripts/margins";
 		</script>
 	</body>
 </html>

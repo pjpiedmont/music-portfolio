@@ -1,6 +1,6 @@
-import unnamedArt from '../assets/images/unnamed_album.png';
-import evolvyArt from '../assets/images/EvolvyBugs.png';
-import placeholderArt from '../assets/images/album placeholder.png';
+import unnamedArt from '@assets/images/unnamed_album.png';
+import evolvyArt from '@assets/images/EvolvyBugs.png';
+import placeholderArt from '@assets/images/album placeholder.png';
 
 const nowplaying = document.querySelector('#now-playing');
 
@@ -29,97 +29,97 @@ const tracklist = [
 	{
 		name: "Track 1",
 		image: unnamedArt.src,
-		path: "/audio/albums/unnamed/track1.mp3"
+		path: "/audio/unnamed/track1.mp3"
 	},
 	{
 		name: "Track 2",
 		image: unnamedArt.src,
-		path: "/audio/albums/unnamed/track2.mp3"
+		path: "/audio/unnamed/track2.mp3"
 	},
 	{
 		name: "Track 3",
 		image: unnamedArt.src,
-		path: "/audio/albums/unnamed/track3.mp3"
+		path: "/audio/unnamed/track3.mp3"
 	},
 	{
 		name: "Track 4",
 		image: unnamedArt.src,
-		path: "/audio/albums/unnamed/track4.mp3"
+		path: "/audio/unnamed/track4.mp3"
 	},
 	{
 		name: "Track 5",
 		image: unnamedArt.src,
-		path: "/audio/albums/unnamed/track5.mp3"
+		path: "/audio/unnamed/track5.mp3"
 	},
 	{
 		name: "Track 6",
 		image: unnamedArt.src,
-		path: "/audio/albums/unnamed/track6.mp3"
+		path: "/audio/unnamed/track6.mp3"
 	},
 	{
 		name: "Track 7",
 		image: unnamedArt.src,
-		path: "/audio/albums/unnamed/track7.mp3"
+		path: "/audio/unnamed/track7.mp3"
 	},
 	{
 		name: "Saturday Snowfall",
 		image: placeholderArt.src,
-		path: "/audio/albums/Solace and Respite/dad 01.01.mp3"
+		path: "/audio/Solace and Respite/dad 01.01.mp3"
 	},
 	{
 		name: "Evolvy Bugs",
 		image: evolvyArt.src,
-		path: "/audio/albums/Evolvy Bugs/01 Evolvy Bugs.mp3"
+		path: "/audio/Evolvy Bugs/01 Evolvy Bugs.mp3"
 	},
 	{
 		name: "Embarkation",
 		image: evolvyArt.src,
-		path: "/audio/albums/Evolvy Bugs/02 Embarkation.mp3"
+		path: "/audio/Evolvy Bugs/02 Embarkation.mp3"
 	},
 	{
 		name: "Asteroid Belt",
 		image: evolvyArt.src,
-		path: "/audio/albums/Evolvy Bugs/03 Asteroid Belt.mp3"
+		path: "/audio/Evolvy Bugs/03 Asteroid Belt.mp3"
 	},
 	{
 		name: "Information Overload",
 		image: evolvyArt.src,
-		path: "/audio/albums/Evolvy Bugs/04 Information Overload.mp3"
+		path: "/audio/Evolvy Bugs/04 Information Overload.mp3"
 	},
 	{
 		name: "Cosmic Jungle",
 		image: evolvyArt.src,
-		path: "/audio/albums/Evolvy Bugs/05 Cosmic Jungle.mp3"
+		path: "/audio/Evolvy Bugs/05 Cosmic Jungle.mp3"
 	},
 	{
 		name: "Tail of a Comet",
 		image: evolvyArt.src,
-		path: "/audio/albums/Evolvy Bugs/06 Tail of a Comet.mp3"
+		path: "/audio/Evolvy Bugs/06 Tail of a Comet.mp3"
 	},
 	{
 		name: "For Science",
 		image: evolvyArt.src,
-		path: "/audio/albums/Evolvy Bugs/07 For Science.mp3"
+		path: "/audio/Evolvy Bugs/07 For Science.mp3"
 	},
 	{
 		name: "Mechanized Ruins",
 		image: evolvyArt.src,
-		path: "/audio/albums/Evolvy Bugs/08 Mechanized Ruins.mp3"
+		path: "/audio/Evolvy Bugs/08 Mechanized Ruins.mp3"
 	},
 	{
 		name: "Entrails",
 		image: evolvyArt.src,
-		path: "/audio/albums/Evolvy Bugs/09 Entrails.mp3"
+		path: "/audio/Evolvy Bugs/09 Entrails.mp3"
 	},
 	{
 		name: "Evolution Always Wins",
 		image: evolvyArt.src,
-		path: "/audio/albums/Evolvy Bugs/10 Evolution Always Wins.mp3"
+		path: "/audio/Evolvy Bugs/10 Evolution Always Wins.mp3"
 	},
 	// {
 	// 	name: "---",
 	// 	image: "../assets/images/album placeholder.png",
-	// 	path: "../assets/audio/albums/Solace and Respite/dad 01.01.mp3"
+	// 	path: "../assets/audio/Solace and Respite/dad 01.01.mp3"
 	// },
 	// {
 	// 	name: "Underflow",

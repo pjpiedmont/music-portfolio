@@ -1,0 +1,181 @@
+---
+
+---
+
+<footer class="container-fluid fixed-bottom bg-main">
+	<div class="container py-3">
+		<audio id="now-playing"></audio>
+
+		<div class="row px-0 px-lg-3 align-items-center">
+			<!-- Album art and track name -->
+			<div class="col-3">
+				<div class="container">
+					<div class="row p-0 justify-content-start align-items-center">
+						<!-- Album art -->
+						<div class="col-12 col-lg-3 p-0">
+							<img id="track-art" src="" />
+						</div>
+						<!-- col -->
+
+						<!-- Track name for desktop -->
+						<div class="col-6 color-main d-none d-lg-block">
+							<span id="track-name" class="track-name">---</span>
+						</div>
+						<!-- col -->
+					</div>
+					<!-- row -->
+				</div>
+				<!-- container -->
+			</div>
+			<!-- col -->
+
+			<div class="col-9 col-lg-6">
+				<div class="container">
+					<div class="row p-0">
+						<!-- Transport controls -->
+						<div class="col-12 p-0">
+							<!-- Play, rewind, fast forward-->
+							<div class="container">
+								<div class="row">
+									<!-- Rewind -->
+									<div
+										class="col-3 col-lg-5 px-2 text-center text-lg-end color-main"
+									>
+										<i id="rewind" class="bi-rewind control"></i>
+									</div>
+									<!-- col -->
+
+									<!-- Play -->
+									<div class="col-3 col-lg-2 px-2 text-center color-main">
+										<i id="play" class="bi-play-circle-fill control"></i>
+									</div>
+									<!-- col -->
+
+									<!-- Fast forward -->
+									<div
+										class="col-3 col-lg-5 px-2 text-center text-lg-start color-main"
+									>
+										<i id="fforward" class="bi-fast-forward control"></i>
+									</div>
+									<!-- col -->
+
+									<!-- Volume icon for mobile -->
+									<div class="col-3 px-2 color-main text-center d-lg-none">
+										<i id="mute" class="bi-volume-up control"></i>
+									</div>
+									<!-- col -->
+								</div>
+								<!-- row -->
+
+								<!-- Playhead and duration -->
+								<div class="row align-items-center">
+									<!-- Current time -->
+									<div class="col-2 px-2 text-end color-main d-none d-lg-block">
+										<span id="current-time">--:--</span>
+									</div>
+									<!-- col -->
+
+									<!-- Playhead -->
+									<div class="col-12 col-lg-8 px-2 my-2 position-relative">
+										<input
+											id="playhead-input"
+											name="playhead"
+											type="range"
+											max="100"
+											value="0"
+											class="form-range position-absolute start-0 end-0"
+										/>
+										<div class="progress position-relative">
+											<div
+												id="playhead-display"
+												class="progress-bar bg-accent"
+												role="progressbar"
+												aria-valuenow="0"
+												aria-valuemin="0"
+												aria-valuemax="100"
+												style="width: 0%;"
+											>
+											</div>
+										</div>
+										<!-- progress -->
+									</div>
+									<!-- col -->
+
+									<!-- Track duration -->
+									<div
+										class="col-2 px-2 text-start color-main d-none d-lg-block"
+									>
+										<span id="duration">--:--</span>
+									</div>
+									<!-- col -->
+								</div>
+								<!-- row -->
+							</div>
+							<!-- container -->
+						</div>
+						<!-- col -->
+					</div>
+					<!-- row -->
+				</div>
+				<!-- container -->
+
+				<!-- Track name for mobile -->
+				<div class="container d-lg-none">
+					<div class="row pt-1">
+						<div id="track-name-mobile" class="col-12 text-center track-name">
+							---
+						</div>
+						<!-- col -->
+					</div>
+					<!-- row -->
+				</div>
+				<!-- container -->
+			</div>
+			<!-- col -->
+
+			<!-- Volume control for desktop -->
+			<div class="col-3 p-0 d-none d-lg-block">
+				<div class="container">
+					<div class="row justify-content-end align-items-center">
+						<!-- Volume slider -->
+						<div class="col-7 p-2 d-none d-lg-block position-relative">
+							<input
+								id="volume-input"
+								name="volume"
+								type="range"
+								max="100"
+								value="100"
+								class="form-range position-absolute start-0 end-0"
+							/>
+							<div class="progress position-relative">
+								<div
+									id="volume-display"
+									class="progress-bar bg-accent"
+									role="progressbar"
+									aria-valuenow="100"
+									aria-valuemin="0"
+									aria-valuemax="100"
+									style="width: 100%"
+								>
+								</div>
+							</div>
+							<!-- progress -->
+						</div>
+						<!-- col -->
+
+						<!-- Volume icon -->
+						<div class="col-12 col-lg-2 p-2 color-main text-end">
+							<i class="bi-volume-up"></i>
+						</div>
+						<!-- col -->
+					</div>
+					<!-- row -->
+				</div>
+				<!-- container -->
+			</div>
+			<!-- col -->
+		</div>
+		<!-- row -->
+	</div>
+	<!-- container -->
+</footer>

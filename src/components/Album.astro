@@ -1,0 +1,51 @@
+---
+interface Props {
+	title: string;
+	imageSrc?: string;
+	imageAlt?: string;
+}
+
+const { title, imageSrc, imageAlt } = Astro.props;
+---
+
+<!-- New album -->
+<div class="container my-5 border rounded-3 overflow-hidden">
+	<!-- Header -->
+	<div class="row p-0">
+		<div class="col-12 p-3 text-center border-bottom bg-accent color-accent">
+			<h1>{title}</h1>
+		</div>
+		<!-- col -->
+	</div>
+	<!-- row -->
+
+	<!-- Content -->
+	<div class="row p-0">
+		<!-- Album art and description -->
+		<div class="col-lg-6 p-0 border-top">
+			<div class="container p-4 p-lg-5">
+				{
+					imageSrc && (
+						<div class="container p-0 album-art">
+							<img src={imageSrc} alt={imageAlt} />
+						</div>
+					)
+				}
+				<slot name="description" />
+			</div>
+			<!-- container -->
+		</div>
+		<!-- col -->
+
+		<!-- List of tracks -->
+		<div class="col-lg-6 p-0 border-top border-lg-start">
+			<div class="container">
+				<slot name="tracks" />
+			</div>
+			<!-- container -->
+		</div>
+		<!-- col -->
+	</div>
+	<!-- row -->
+</div>
+<!-- container - unnamed album -->
