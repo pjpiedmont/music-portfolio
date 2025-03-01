@@ -1,89 +1,199 @@
 ---
-import profileImage from "@assets/images/tulips.jpeg";
-import albumImage from "@assets/images/unnamed_album.png";
+import { getImage } from "astro:assets";
+import "@styles/fonts.css";
+
+import parker from "@assets/images/tulips.jpeg";
+const optimizedParker = await getImage({ src: parker });
 ---
 
-<section id="hero" class="container-fluid mb-5 p-0 overflow-hidden">
-	<div
-		class="row p-4 p-md-5 text-body-emphasis"
-		style={`background-image: url('${albumImage.src}'); background-size: cover; background-position: top;`}
-	>
-		<div class="col-lg-6 p-0">
-			<div class="container p-0" style="height: 100%">
-				<div class="row p-5 align-items-center" style="height: 100%">
-					<div class="col-lg-10 offset-lg-1 p-0">
-						<div
-							class="container p-0 border rounded-circle overflow-hidden"
-							style="box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.35); max-height: 35rem; max-width: 35rem;"
-						>
-							<img src={profileImage.src} alt="Portrait of Parker Piedmont" />
-						</div>
-					</div>
-					<!-- col -->
-				</div>
-				<!-- row -->
-			</div>
-			<!-- container -->
-		</div>
-		<!-- col -->
+<section class="container">
+	<img src={optimizedParker.src} alt="Portrait of Parker Piedmont" />
+	<div class="container center-children">
+		<div>
+			<h1>
+				<span id="intro">Hi, my name is</span>
+				<br />
+				<span id="name">Parker Piedmont.</span>
+				<br />
+				<span id="job-description">I write electronic music.</span>
+			</h1>
 
-		<div class="col-lg-6">
-			<div class="container" style="height: 100%">
-				<div class="row p-lg-5 align-items-center" style="height: 100%">
-					<div
-						class="col-12 color-main text-center text-lg-start p-4 rounded-3 bg-main border"
-						style="box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.35)"
-					>
-						<h1>Parker Piedmont</h1>
-						<p class="lead">Computer Music Man</p>
-						<hr />
-						<p>
-							I'm a composer, producer, and software engineer in the Seattle
-							area. I started my musical journey as a saxophonist but soon
-							developed a taste for the more artificial sounds of synthesizers.
-							I've been writing music since I graduated high school, and I love
-							to combine the organic elements of my saxophone performance
-							background with the mechanical elements of electronic music. Sort
-							of a both-halves-of-the-brain thing, you know? Anyway, in my free
-							time, I can be found stirring up trouble in my D&D campaign and
-							trying new restaurants around Seattle.
-						</p>
-						<p class="mb-lg-0">
-							<a
-								href="mailto:parker@parkerpiedmont.com"
-								target="_blank"
-								class="p-2 rounded-2"><i class="bi-envelope-fill"></i></a
-							>
-							<a
-								href="https://www.linkedin.com/in/parkerpiedmont/"
-								target="_blank"
-								class="p-2 rounded-2"><i class="bi-linkedin"></i></a
-							>
-							<a
-								href="https://discordapp.com/users/232967632897179648"
-								target="_blank"
-								class="p-2 rounded-2"><i class="bi-discord"></i></a
-							>
-							<a
-								href="https://instagram.com/pjpiedmont"
-								target="_blank"
-								class="p-2 rounded-2"><i class="bi-instagram"></i></a
-							>
-							<!-- <p class="lead my-3">Multiple lines of text that form the lede,
-        informing
-        new readers quickly and efficiently about what’s most interesting
-        in this
-        post’s contents.</p>
-      <p class="lead mb-0"><a href="#"
-          class="text-body-emphasis fw-bold">Continue
-          reading...</a></p> -->
-						</p>
-					</div>
-				</div>
-			</div>
+			<p>
+				I'm a composer and producer in the Seattle area. I combine elements of
+				synthwave, jazz, and EDM to tell a story.
+			</p>
+
+			<a href="#goto"
+				><i class="bi bi-arrow-down"></i>
+				Listen Now
+				<i class="bi bi-arrow-down"></i>
+			</a>
 		</div>
-		<!-- col -->
 	</div>
-	<!-- row -->
+
+	<style lang="scss">
+		@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+		@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+		.container {
+			display: flex;
+			max-width: 100%;
+
+			&.center-children {
+				justify-content: center;
+				align-items: center;
+			}
+		}
+
+		section {
+			flex-direction: column;
+			min-height: 75vh;
+			padding: 3em 2em;
+			color: #fff;
+			font-size: 16px;
+			background: linear-gradient(135deg, #170044, #510055);
+			border: none;
+			-webkit-mask: conic-gradient(
+					from -45deg at bottom,
+					#0000,
+					#000 1deg 89deg,
+					#0000 90deg
+				)
+				50%/3em 100%;
+		}
+
+		img {
+			display: block;
+			max-width: min(60%, 200px);
+			margin: 0 auto;
+			object-fit: cover;
+			aspect-ratio: 1/1;
+			border: 0.1em solid #ff6fe7;
+			border-radius: 50%;
+		}
+
+		div.container.center-children {
+			flex-grow: 1;
+			padding-bottom: 1.5em;
+		}
+
+		h1 {
+			margin: 3em 0 1em;
+			font-size: 1em;
+		}
+
+		#intro {
+			display: inline-block;
+			margin-bottom: 1em;
+			font-family: "IBM Plex Mono", monospace;
+			font-size: 0.8em;
+			font-weight: 400;
+			color: #ff6fe7;
+		}
+
+		#name {
+			font-family: "Inter", sans-serif;
+			font-size: 2em;
+			word-spacing: 0.1em;
+			text-shadow: 0 0.25em 1em rgba(0, 0, 0, 0.5);
+		}
+
+		#job-description {
+			color: #f3c6ac;
+			font-family: "Inter", sans-serif;
+			font-size: 2em;
+			word-spacing: 0.1em;
+			text-shadow: 0 0.25em 1em rgba(0, 0, 0, 0.5);
+		}
+
+		p {
+			max-width: 19em;
+			margin-bottom: 2em;
+			font-family: "Inter", sans-serif;
+			font-size: 0.9em;
+			line-height: 1.5;
+		}
+
+		a {
+			display: inline-block;
+			padding: 0.75em 1.5em;
+			border: 0.1em solid #ff6fe7;
+			font-family: "IBM Plex Mono", monospace;
+			font-size: 0.9em;
+			text-decoration: none;
+			color: #ff6fe7;
+
+			&:hover {
+				background: #ff6fe7;
+				color: #000;
+			}
+		}
+
+		@media screen and (min-width: 400px) {
+		}
+
+		@media screen and (min-width: 576px) {
+			section {
+				font-size: 18px;
+			}
+		}
+
+		@media screen and (min-width: 768px) {
+			section {
+				flex-direction: row;
+				padding: 0;
+			}
+
+			img {
+				max-width: 35%;
+				border: none;
+				border-radius: 0%;
+			}
+
+			div.container.center-children {
+				padding: 3em;
+				padding-bottom: calc(3em + 20px);
+				background: linear-gradient(135deg, #170044, #510055);
+			}
+
+			h1 {
+				margin-top: 0;
+			}
+		}
+
+		@media screen and (min-width: 992px) {
+			section {
+				font-size: 20px;
+			}
+
+			div.container.center-children {
+				padding: 5em;
+				padding-bottom: calc(5em + 20px);
+			}
+		}
+
+		@media screen and (min-width: 1200px) {
+			section {
+				font-size: 22px;
+			}
+		}
+
+		@media screen and (min-width: 1400px) {
+			section {
+				font-size: 24px;
+			}
+		}
+
+		@media screen and (min-width: 2000px) {
+			section {
+				font-size: 28px;
+			}
+		}
+
+		@media screen and (min-width: 3000px) {
+			section {
+				font-size: 34px;
+			}
+		}
+	</style>
 </section>
-<!-- hero -->
