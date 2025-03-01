@@ -24,14 +24,18 @@ import MusicPlayer from "@components/MusicPlayer.astro";
 			href="/icons/bootstrap-icons-1.10.3/bootstrap-icons.css"
 			rel="stylesheet"
 		/>
+
+		<style>
+			body {
+				padding-top: 88px;
+			}
+		</style>
 	</head>
 
 	<body data-bs-theme="dark" class="bg-main font-monospace">
 		<Header />
 
-		<main class="pt-lg-0 pb-lg-5 px-lg-0 p-4">
-			<slot />
-		</main>
+		<slot />
 
 		<MusicPlayer />
 
