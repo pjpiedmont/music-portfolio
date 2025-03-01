@@ -1,0 +1,122 @@
+---
+import AlbumCard from "@components/AlbumCard.astro";
+
+import { getImage } from "astro:assets";
+
+import unnamedAlbumArt from "@assets/images/unnamed_album.png";
+const unnamedAlbumArtOpt = await getImage({ src: unnamedAlbumArt });
+import evolvyBugsAlbumArt from "@assets/images/EvolvyBugs.png";
+const evolvyBugsAlbumArtOpt = await getImage({ src: evolvyBugsAlbumArt });
+import placeholderAlbumArt from "@assets/images/album placeholder.png";
+const placeholderAlbumArtOpt = await getImage({ src: placeholderAlbumArt });
+---
+
+<section>
+	<h2>Albums</h2>
+
+	<div class="container">
+		<div class="card">
+			<AlbumCard
+				title="New Album Incoming!"
+				year="2025"
+				imageSrc={unnamedAlbumArtOpt.src}
+				imageAlt="Album art for unnamed album."
+			/>
+		</div>
+		<div class="card">
+			<AlbumCard
+				title="Solace and Respite"
+				year="2023"
+				imageSrc={placeholderAlbumArtOpt.src}
+				imageAlt="Placeholder album art for Solace and Respite."
+			/>
+		</div>
+		<div class="card">
+			<AlbumCard
+				title="Evolvy Bugs"
+				year="2020"
+				imageSrc={evolvyBugsAlbumArtOpt.src}
+				imageAlt="Album art for Evolvy Bugs."
+			/>
+		</div>
+	</div>
+</section>
+
+<style>
+	@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+	.container {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+		align-items: stretch;
+		max-width: 1400px;
+		margin: 0 auto;
+		padding: 0;
+	}
+
+	section {
+		margin-top: 4em;
+		font-size: 16px;
+	}
+
+	h2 {
+		display: block;
+		margin-bottom: 1em;
+		text-align: center;
+		font-family: "Inter", sans-serif;
+		font-size: 2em;
+	}
+
+	.card {
+		width: calc(33% - 3em);
+		margin: 1.5em;
+
+		&:hover {
+			transform: translateY(-1em);
+		}
+	}
+
+	@media screen and (min-width: 400px) {
+	}
+
+	@media screen and (min-width: 576px) {
+		section {
+			font-size: 18px;
+		}
+	}
+
+	@media screen and (min-width: 768px) {
+	}
+
+	@media screen and (min-width: 992px) {
+		section {
+			font-size: 20px;
+		}
+	}
+
+	@media screen and (min-width: 1200px) {
+		section {
+			font-size: 22px;
+		}
+	}
+
+	@media screen and (min-width: 1400px) {
+		section {
+			font-size: 24px;
+		}
+	}
+
+	@media screen and (min-width: 2000px) {
+		section {
+			font-size: 28px;
+		}
+	}
+
+	@media screen and (min-width: 3000px) {
+		section {
+			font-size: 34px;
+		}
+	}
+</style>

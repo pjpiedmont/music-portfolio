@@ -1,0 +1,103 @@
+---
+interface Props {
+	title: string;
+	year: string;
+	imageSrc: string;
+	imageAlt: string;
+}
+
+const { title, year, imageSrc, imageAlt } = Astro.props;
+---
+
+<div class="container">
+	<img src={imageSrc} alt={imageAlt} />
+	<div class="details">
+		<span class="title">{title}</span>
+		<span class="year">{year}</span>
+	</div>
+
+	<div class="actions">
+		<a href="#" class="play">
+			Play
+			<i class="bi bi-play"></i>
+		</a>
+		<a href="#" class="explore">
+			Explore
+			<i class="bi bi-arrow-right"></i>
+		</a>
+	</div>
+</div>
+
+<style>
+	@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+	@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+	.container {
+		display: flex;
+		height: 100%;
+		flex-direction: column;
+		background-color: #212529;
+		border: 0.1em solid rgba(255, 255, 255, 0.15);
+		font-family: "IBM Plex Mono", monospace;
+
+		&:hover {
+			border-color: #ff6fe7;
+
+			a,
+			span {
+				color: #fff;
+			}
+
+			.details,
+			.actions,
+			.explore {
+				border-color: #ff6fe7;
+			}
+		}
+	}
+
+	img {
+		display: block;
+		width: 100%;
+		aspect-ratio: 1/1;
+		object-fit: cover;
+	}
+
+	.details {
+		display: flex;
+		align-items: center;
+		flex-grow: 1;
+		border-top: 0.1em solid rgba(255, 255, 255, 0.15);
+	}
+
+	.actions {
+		display: flex;
+		border-top: 0.1em solid rgba(255, 255, 255, 0.15);
+	}
+
+	span,
+	a {
+		display: block;
+		flex-grow: 1;
+		padding: 0.75em 1.25em;
+		color: rgba(255, 255, 255, 0.5);
+		font-size: 0.8em;
+	}
+
+	.year {
+		text-align: right;
+	}
+
+	a {
+		text-decoration: none;
+
+		&.explore {
+			border-left: 0.1em solid rgba(255, 255, 255, 0.15);
+		}
+
+		&:hover {
+			background: #ff6fe7;
+			color: #000 !important;
+		}
+	}
+</style>
