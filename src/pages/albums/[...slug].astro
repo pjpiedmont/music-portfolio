@@ -1,7 +1,9 @@
 ---
-import type { ImageMetadata } from "astro";
-import { Image } from "astro:assets";
+// import type { ImageMetadata } from "astro";
+// import { Image } from "astro:assets";
 import { getCollection, render } from "astro:content";
+
+import AlbumDetailsLayout from "@layouts/AlbumDetailsLayout.astro";
 
 export async function getStaticPaths() {
 	const albums = await getCollection("albums");
@@ -14,16 +16,16 @@ export async function getStaticPaths() {
 const { album } = Astro.props;
 const { Content } = await render(album);
 
-const images = import.meta.glob<{ default: ImageMetadata }>(
-	"@assets/albumArt/*.{jpeg,jpg,png,gif}",
-);
-const albumArtSrc = `/src/assets/albumArt/${album.data.albumArt.filename}`;
-if (!images[albumArtSrc])
-	throw new Error(
-		`"${albumArtSrc}" does not exist in glob: "src/assets/albumArt/*.{jpeg,jpg,png,gif}"`,
-	);
+// const images = import.meta.glob<{ default: ImageMetadata }>(
+// 	"@assets/albumArt/*.{jpeg,jpg,png,gif}",
+// );
+// const albumArtSrc = `/src/assets/albumArt/${album.data.albumArt.filename}`;
+// if (!images[albumArtSrc])
+// 	throw new Error(
+// 		`"${albumArtSrc}" does not exist in glob: "src/assets/albumArt/*.{jpeg,jpg,png,gif}"`,
+// 	);
 ---
 
-<h1>{album.data.title}</h1>
-<Image src={images[albumArtSrc]()} alt={album.data.albumArt.alt} />
-<p>Album art by {album.data.albumArt.artist}</p>
+<AlbumDetailsLayout frontmatter={album.data}>
+	<Content />
+</AlbumDetailsLayout>
