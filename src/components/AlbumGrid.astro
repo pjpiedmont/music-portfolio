@@ -3,11 +3,11 @@ import AlbumCard from "@components/AlbumCard.astro";
 
 import { getImage } from "astro:assets";
 
-import unnamedAlbumArt from "@assets/images/unnamed_album.png";
+import unnamedAlbumArt from "@assets/albumArt/unnamed_album.png";
 const unnamedAlbumArtOpt = await getImage({ src: unnamedAlbumArt });
-import evolvyBugsAlbumArt from "@assets/images/EvolvyBugs.png";
+import evolvyBugsAlbumArt from "@assets/albumArt/EvolvyBugs.png";
 const evolvyBugsAlbumArtOpt = await getImage({ src: evolvyBugsAlbumArt });
-import placeholderAlbumArt from "@assets/images/album placeholder.png";
+import placeholderAlbumArt from "@assets/albumArt/album placeholder.png";
 const placeholderAlbumArtOpt = await getImage({ src: placeholderAlbumArt });
 ---
 
