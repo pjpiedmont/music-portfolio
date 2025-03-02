@@ -11,7 +11,7 @@ const albums = defineCollection({
     title: z.string(),
     releaseDate: z.number(),
     albumArt: z.object({
-      src: z.string(),
+      filename: z.string(),
       alt: z.string(),
       artist: z.string()
     }),
