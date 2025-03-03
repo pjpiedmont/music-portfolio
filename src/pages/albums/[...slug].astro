@@ -16,6 +16,8 @@ export async function getStaticPaths() {
 const { album } = Astro.props;
 const { Content } = await render(album);
 
+console.log("frontmatter:", album.data);
+
 // const images = import.meta.glob<{ default: ImageMetadata }>(
 // 	"@assets/albumArt/*.{jpeg,jpg,png,gif}",
 // );

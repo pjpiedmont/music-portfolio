@@ -7,11 +7,11 @@ import { z, defineCollection } from "astro:content";
 // Define a `loader` and `schema` for each collection
 const albums = defineCollection({
   loader: glob({ pattern: '**/[^_]*.md', base: "./src/albums" }),
-  schema: z.object({
+  schema: ({ image }) => z.object({
     title: z.string(),
     releaseDate: z.number(),
     albumArt: z.object({
-      filename: z.string(),
+      src: image(),
       alt: z.string(),
       artist: z.string()
     }),
