@@ -25,6 +25,7 @@ img {
 .container {
   display: flex;
   margin: 0 auto;
+  padding: 2rem;
 
   &.full-width {
     max-width: 100%;
@@ -69,6 +70,12 @@ img {
 
   .container {
     max-width: max(1400px, 60%);
+  }
+}
+
+@media screen and (min-width: calc(1400px + 2rem)) {
+  .container {
+    padding: 2rem 0;
   }
 }
 
