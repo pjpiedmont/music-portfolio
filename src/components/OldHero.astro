@@ -1,0 +1,89 @@
+---
+import profileImage from "@assets/tulips.jpeg";
+import albumImage from "@assets/albumArt/unnamed_album.png";
+---
+
+<section id="hero" class="container-fluid mb-5 p-0 overflow-hidden">
+	<div
+		class="row p-4 p-md-5 text-body-emphasis"
+		style={`background-image: url('${albumImage.src}'); background-size: cover; background-position: top;`}
+	>
+		<div class="col-lg-6 p-0">
+			<div class="container p-0" style="height: 100%">
+				<div class="row p-5 align-items-center" style="height: 100%">
+					<div class="col-lg-10 offset-lg-1 p-0">
+						<div
+							class="container p-0 border rounded-circle overflow-hidden"
+							style="box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.35); max-height: 35rem; max-width: 35rem;"
+						>
+							<img src={profileImage.src} alt="Portrait of Parker Piedmont" />
+						</div>
+					</div>
+					<!-- col -->
+				</div>
+				<!-- row -->
+			</div>
+			<!-- container -->
+		</div>
+		<!-- col -->
+
+		<div class="col-lg-6">
+			<div class="container" style="height: 100%">
+				<div class="row p-lg-5 align-items-center" style="height: 100%">
+					<div
+						class="col-12 color-main text-center text-lg-start p-4 rounded-3 bg-main border"
+						style="box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.35)"
+					>
+						<h1>Parker Piedmont</h1>
+						<p class="lead">Computer Music Man</p>
+						<hr />
+						<p>
+							I'm a composer, producer, and software engineer in the Seattle
+							area. I started my musical journey as a saxophonist but soon
+							developed a taste for the more artificial sounds of synthesizers.
+							I've been writing music since I graduated high school, and I love
+							to combine the organic elements of my saxophone performance
+							background with the mechanical elements of electronic music. Sort
+							of a both-halves-of-the-brain thing, you know? Anyway, in my free
+							time, I can be found stirring up trouble in my D&D campaign and
+							trying new restaurants around Seattle.
+						</p>
+						<p class="mb-lg-0">
+							<a
+								href="mailto:parker@parkerpiedmont.com"
+								target="_blank"
+								class="p-2 rounded-2"><i class="bi-envelope-fill"></i></a
+							>
+							<a
+								href="https://www.linkedin.com/in/parkerpiedmont/"
+								target="_blank"
+								class="p-2 rounded-2"><i class="bi-linkedin"></i></a
+							>
+							<a
+								href="https://discordapp.com/users/232967632897179648"
+								target="_blank"
+								class="p-2 rounded-2"><i class="bi-discord"></i></a
+							>
+							<a
+								href="https://instagram.com/pjpiedmont"
+								target="_blank"
+								class="p-2 rounded-2"><i class="bi-instagram"></i></a
+							>
+							<!-- <p class="lead my-3">Multiple lines of text that form the lede,
+        informing
+        new readers quickly and efficiently about what’s most interesting
+        in this
+        post’s contents.</p>
+      <p class="lead mb-0"><a href="#"
+          class="text-body-emphasis fw-bold">Continue
+          reading...</a></p> -->
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- col -->
+	</div>
+	<!-- row -->
+</section>
+<!-- hero -->
