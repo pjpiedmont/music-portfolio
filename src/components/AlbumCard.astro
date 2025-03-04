@@ -4,9 +4,10 @@ interface Props {
 	year: string;
 	imageSrc: string;
 	imageAlt: string;
+	exploreUrl: string;
 }
 
-const { title, year, imageSrc, imageAlt } = Astro.props;
+const { title, year, imageSrc, imageAlt, exploreUrl } = Astro.props;
 ---
 
 <div class="container">
@@ -21,7 +22,7 @@ const { title, year, imageSrc, imageAlt } = Astro.props;
 			Play
 			<i class="bi bi-play"></i>
 		</a>
-		<a href="#" class="explore">
+		<a href={exploreUrl} class="explore">
 			Explore
 			<i class="bi bi-arrow-right"></i>
 		</a>
