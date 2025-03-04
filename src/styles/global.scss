@@ -1,3 +1,9 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
 html {
   font-size: 100%;
 }
@@ -10,8 +16,16 @@ body {
   color: #fff;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 .container {
   display: flex;
+  margin: 0 auto;
+  padding: 2rem;
 
   &.full-width {
     max-width: 100%;
@@ -20,6 +34,10 @@ body {
   &.center-children {
     justify-content: center;
     align-items: center;
+  }
+
+  &.block {
+    display: block;
   }
 }
 

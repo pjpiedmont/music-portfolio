@@ -1,6 +1,6 @@
-import unnamedArt from '@assets/images/unnamed_album.png';
-import evolvyArt from '@assets/images/EvolvyBugs.png';
-import placeholderArt from '@assets/images/album placeholder.png';
+import unnamedArt from '@assets/albumArt/unnamed_album.png';
+import evolvyArt from '@assets/albumArt/EvolvyBugs.png';
+import placeholderArt from '@assets/albumArt/album placeholder.png';
 
 const nowplaying = document.querySelector('#now-playing');
 

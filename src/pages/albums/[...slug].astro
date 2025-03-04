@@ -1,0 +1,33 @@
+---
+// import type { ImageMetadata } from "astro";
+// import { Image } from "astro:assets";
+import { getCollection, render } from "astro:content";
+
+import AlbumDetailsLayout from "@layouts/AlbumDetailsLayout.astro";
+
+export async function getStaticPaths() {
+	const albums = await getCollection("albums");
+	return albums.map((album) => ({
+		params: { slug: album.id },
+		props: { album },
+	}));
+}
+
+const { album } = Astro.props;
+const { Content } = await render(album);
+
+console.log("frontmatter:", album.data);
+
+// const images = import.meta.glob<{ default: ImageMetadata }>(
+// 	"@assets/albumArt/*.{jpeg,jpg,png,gif}",
+// );
+// const albumArtSrc = `/src/assets/albumArt/${album.data.albumArt.filename}`;
+// if (!images[albumArtSrc])
+// 	throw new Error(
+// 		`"${albumArtSrc}" does not exist in glob: "src/assets/albumArt/*.{jpeg,jpg,png,gif}"`,
+// 	);
+---
+
+<AlbumDetailsLayout frontmatter={album.data}>
+	<Content />
+</AlbumDetailsLayout>

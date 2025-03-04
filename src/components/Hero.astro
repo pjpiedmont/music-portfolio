@@ -1,11 +1,14 @@
 ---
 import { getImage } from "astro:assets";
-import parker from "@assets/images/tulips.jpeg";
+import parker from "@assets/tulips.jpeg";
 const optimizedParker = await getImage({ src: parker });
 ---
 
 <div id="outer" class="container full-width">
-	<img src={optimizedParker.src} alt="Portrait of Parker Piedmont" />
+	<div class="img-container">
+		<img src={optimizedParker.src} alt="Portrait of Parker Piedmont" />
+	</div>
+
 	<div class="container center-children">
 		<div>
 			<h1>
@@ -43,11 +46,18 @@ const optimizedParker = await getImage({ src: parker });
 		background: linear-gradient(135deg, #170044, #510055);
 	}
 
-	img {
-		display: block;
+	.img-container {
 		width: 100%;
 		max-height: 600px;
-		margin: 0 auto;
+		overflow: hidden;
+	}
+
+	img {
+		display: block;
+		min-width: 100%;
+		min-height: 100%;
+		// width: 100%;
+		// max-height: 600px;
 		object-fit: cover;
 		border: none;
 		--m: conic-gradient(
@@ -143,9 +153,15 @@ const optimizedParker = await getImage({ src: parker });
 			padding: 5rem;
 		}
 
-		img {
+		.img-container {
 			max-width: 37%;
 			max-height: 100%;
+		}
+
+		img {
+			min-width: calc(100% + 1px);
+			// max-width: 37%;
+			// max-height: 100%;
 			--m: conic-gradient(
 					from -135deg at right,
 					#0000,
