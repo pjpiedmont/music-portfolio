@@ -5,6 +5,27 @@ albumArt:
   src: '@assets/albumArt/EvolvyBugs.png'
   alt: 'Album art for Evolvy Bugs'
   artist: 'Landon Wright'
+tracks:
+  - name: 'Evolvy Bugs'
+    src: '/audio/Evolvy Bugs/01 Evolvy Bugs.mp3'
+  - name: 'Embarkation'
+    src: '/audio/Evolvy Bugs/02 Embarkation.mp3'
+  - name: 'Asteroid Belt'
+    src: '/audio/Evolvy Bugs/03 Asteroid Belt.mp3'
+  - name: 'Information Overload'
+    src: '/audio/Evolvy Bugs/04 Information Overload.mp3'
+  - name: 'Cosmic Jungle'
+    src: '/audio/Evolvy Bugs/05 Cosmic Jungle.mp3'
+  - name: 'Tail of a Comet'
+    src: '/audio/Evolvy Bugs/06 Tail of a Comet.mp3'
+  - name: 'For Science'
+    src: '/audio/Evolvy Bugs/07 For Science.mp3'
+  - name: 'Mechanized Ruins'
+    src: '/audio/Evolvy Bugs/08 Mechanized Ruins.mp3'
+  - name: 'Entrails'
+    src: '/audio/Evolvy Bugs/09 Entrails.mp3'
+  - name: 'Evolution Always Wins'
+    src: '/audio/Evolvy Bugs/10 Evolution Always Wins.mp3'
 ---
 
 

@@ -5,4 +5,7 @@ albumArt:
   src: '@assets/albumArt/album placeholder.png'
   alt: 'Placeholder album art'
   artist: 'Unknown'
+tracks:
+  - name: 'Saturday Snowfall'
+    src: '/audio/Solace and Respite/dad 01 01.mp3'
 ---

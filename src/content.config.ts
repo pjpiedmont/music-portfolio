@@ -15,6 +15,10 @@ const albums = defineCollection({
       alt: z.string(),
       artist: z.string()
     }),
+    tracks: z.array(z.object({
+      name: z.string(),
+      src: z.string(),
+    }))
   })
 });
 
