@@ -1,14 +1,31 @@
 ---
 import { Image } from "astro:assets";
+import * as mm from "music-metadata";
 import TestLayout from "@layouts/TestLayout.astro";
 const { frontmatter } = Astro.props;
+
+const getAudioDuration = async (track: any) => {
+	const metadata = await mm.parseFile(track.src, { duration: true });
+	const duration = Math.floor(metadata.format.duration);
+	return `${Math.floor(duration / 60)}:${String(duration % 60).padStart(2, "0")}`;
+};
+
+const tracks = await Promise.all(
+	frontmatter.tracks.map(async (track: any, i: number) => {
+		return {
+			num: i + 1,
+			name: track.name,
+			duration: await getAudioDuration(track),
+		};
+	}),
+);
 ---
 
 <TestLayout>
 	<header>
 		<div class="container block">
 			<h1>{frontmatter.title}</h1>
-			<span>{frontmatter.releaseDate}</span>
+			<span class="release-date">{frontmatter.releaseDate}</span>
 		</div>
 	</header>
 
@@ -22,6 +39,20 @@ const { frontmatter } = Astro.props;
 
 			<!-- <p>Album art by {frontmatter.albumArt.artist}</p> -->
 			<slot />
+
+			{
+				tracks.map((track: any) => (
+					<div class="container track">
+						<span class="track-num">
+							{tracks.length >= 10 && track.num < 10
+								? ` ${track.num}`
+								: track.num}
+						</span>
+						<span class="track-name">{track.name}</span>
+						<span class="track-duration">{track.duration}</span>
+					</div>
+				))
+			}
 		</div>
 	</section>
 </TestLayout>
@@ -41,7 +72,7 @@ const { frontmatter } = Astro.props;
 		text-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.5);
 	}
 
-	span {
+	.release-date {
 		font-family: var(--font-mono);
 	}
 
@@ -56,10 +87,46 @@ const { frontmatter } = Astro.props;
 		box-shadow: 0.5rem 0.5rem 0rem #ff6fe7;
 	}
 
-	section :global(p) {
-		font-family: "Inter", sans-serif;
-		line-height: 1.5;
-		font-size: 1.2rem;
+	section {
+		:global(p) {
+			font-family: var(--font-sans);
+			line-height: 1.5;
+			font-size: 1.2rem;
+		}
+	}
+
+	.track {
+		margin-bottom: 1rem;
+		padding: 1.5rem 1.5rem;
+		// border: 0.1rem solid transparent;
+		font-family: var(--font-mono);
+
+		&:hover {
+			cursor: pointer;
+			border-color: #ff6fe7;
+			background-color: #ff6fe7;
+			color: #000;
+
+			.track-num,
+			.track-duration {
+				color: #000;
+			}
+		}
+
+		.track-num {
+			margin-right: 1.5rem;
+			color: rgba(255, 255, 255, 0.3);
+			white-space: pre;
+		}
+
+		.track-name {
+			flex-grow: 1;
+			margin-right: 1.5rem;
+		}
+
+		.track-duration {
+			color: rgba(255, 255, 255, 0.3);
+		}
 	}
 
 	@media screen and (min-width: 576px) {
@@ -72,7 +139,7 @@ const { frontmatter } = Astro.props;
 
 	@media screen and (min-width: 992px) {
 		h1,
-		span {
+		.release-date {
 			max-width: calc(70% - 5rem);
 		}
 
@@ -93,6 +160,15 @@ const { frontmatter } = Astro.props;
 			position: absolute;
 			right: 3rem;
 			transform: translateY(calc(-50% - 2rem));
+		}
+
+		.track {
+			padding: 1rem 1.5rem;
+		}
+
+		.track-num,
+		.track-name {
+			margin-right: 1rem;
 		}
 	}
 
