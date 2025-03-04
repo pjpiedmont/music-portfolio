@@ -46,8 +46,6 @@ const placeholderAlbumArtOpt = await getImage({ src: placeholderAlbumArt });
 </section>
 
 <style lang="scss">
-	@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
-
 	.container {
 		flex-wrap: wrap;
 		justify-content: flex-start;
@@ -58,19 +56,17 @@ const placeholderAlbumArtOpt = await getImage({ src: placeholderAlbumArt });
 
 	section {
 		margin-top: 4rem;
-		font-size: 16px;
 	}
 
 	h2 {
 		display: block;
 		margin-bottom: 1rem;
 		text-align: center;
-		font-family: "Inter", sans-serif;
+		font-family: var(--font-sans);
 		font-size: 2rem;
 	}
 
 	.card {
-		/* width: calc(33% - 3em); */
 		flex: 1 0 51%;
 		margin: 1.5rem 0;
 	}
@@ -79,9 +75,6 @@ const placeholderAlbumArtOpt = await getImage({ src: placeholderAlbumArt });
 	}
 
 	@media screen and (min-width: 576px) {
-		section {
-			font-size: 18px;
-		}
 	}
 
 	@media screen and (min-width: 768px) {
@@ -97,10 +90,6 @@ const placeholderAlbumArtOpt = await getImage({ src: placeholderAlbumArt });
 	}
 
 	@media screen and (min-width: 992px) {
-		section {
-			font-size: 20px;
-		}
-
 		.card:hover {
 			transform: translate(-0.5rem, -0.5rem);
 			box-shadow: 0.5rem 0.5rem 0rem #703784;
@@ -108,19 +97,12 @@ const placeholderAlbumArtOpt = await getImage({ src: placeholderAlbumArt });
 	}
 
 	@media screen and (min-width: 1200px) {
-		section {
-			font-size: 22px;
-		}
-
 		.card {
 			flex-basis: 26%;
 		}
 	}
 
 	@media screen and (min-width: 1400px) {
-		section {
-			font-size: 24px;
-		}
 	}
 
 	@media screen and (min-width: calc(1400px + 3rem)) {
@@ -130,14 +112,8 @@ const placeholderAlbumArtOpt = await getImage({ src: placeholderAlbumArt });
 	}
 
 	@media screen and (min-width: 2000px) {
-		section {
-			font-size: 28px;
-		}
 	}
 
 	@media screen and (min-width: 3000px) {
-		section {
-			font-size: 34px;
-		}
 	}
 </style>
