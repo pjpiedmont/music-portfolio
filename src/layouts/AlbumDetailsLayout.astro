@@ -15,7 +15,7 @@ console.log("frontmatter:", frontmatter);
 
 	<section>
 		<div class="container block">
-			<div class="container img-container">
+			<div class="container block img-container">
 				<Image src={frontmatter.albumArt.src} alt={frontmatter.albumArt.alt} />
 			</div>
 
@@ -50,6 +50,7 @@ console.log("frontmatter:", frontmatter);
 	}
 
 	.img-container {
+		max-width: 100%;
 		padding: 0;
 	}
 
@@ -61,6 +62,8 @@ console.log("frontmatter:", frontmatter);
 
 	section :global(p) {
 		font-family: "Inter", sans-serif;
+		line-height: 1.5;
+		font-size: 1rem;
 	}
 
 	@media screen and (min-width: 576px) {
@@ -78,7 +81,6 @@ console.log("frontmatter:", frontmatter);
 		}
 
 		.img-container {
-			justify-content: flex-end;
 			height: 0;
 			position: relative;
 		}
