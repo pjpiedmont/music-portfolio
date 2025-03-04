@@ -9,7 +9,7 @@ console.log("frontmatter:", frontmatter);
 	<header>
 		<div class="container block">
 			<h1>{frontmatter.title}</h1>
-			<span>2020</span>
+			<span>{frontmatter.releaseDate}</span>
 		</div>
 	</header>
 
@@ -50,32 +50,51 @@ console.log("frontmatter:", frontmatter);
 	}
 
 	.img-container {
-		justify-content: flex-end;
 		padding: 0;
-		height: 0;
-		position: relative;
-		// transform: translateY(calc(-50% - 2rem));
 	}
 
 	img {
-		width: 30%;
-		position: absolute;
-		right: 3rem;
+		margin-bottom: 2rem;
 		border: 0.1rem solid #ff6fe7;
 		box-shadow: 0.5rem 0.5rem 0rem #ff6fe7;
-		transform: translateY(calc(-50% - 2rem));
-		// position: relative;
-		// margin-top: -50%;
-	}
-
-	.img-spacing {
-		display: block;
-		float: right;
-		width: calc(30% + 5rem);
-		padding-top: calc(15% - 0.5rem);
 	}
 
 	section :global(p) {
 		font-family: "Inter", sans-serif;
+	}
+
+	@media screen and (min-width: 576px) {
+		img {
+			max-width: min(100%, 576px);
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+
+	@media screen and (min-width: 992px) {
+		h1,
+		span {
+			max-width: calc(70% - 5rem);
+		}
+
+		.img-container {
+			justify-content: flex-end;
+			height: 0;
+			position: relative;
+		}
+
+		.img-spacing {
+			display: block;
+			float: right;
+			width: calc(30% + 5rem);
+			padding-top: calc(15% - 0.5rem);
+		}
+
+		img {
+			width: 30%;
+			position: absolute;
+			right: 3rem;
+			transform: translateY(calc(-50% - 2rem));
+		}
 	}
 </style>
