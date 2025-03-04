@@ -34,9 +34,6 @@ const optimizedParker = await getImage({ src: parker });
 </div>
 
 <style lang="scss">
-	@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
-	@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
-
 	#outer {
 		flex-direction: column;
 		min-height: min(75vh, 500px);
@@ -56,8 +53,6 @@ const optimizedParker = await getImage({ src: parker });
 		display: block;
 		min-width: 100%;
 		min-height: 100%;
-		// width: 100%;
-		// max-height: 600px;
 		object-fit: cover;
 		border: none;
 		--m: conic-gradient(
@@ -84,14 +79,14 @@ const optimizedParker = await getImage({ src: parker });
 	#intro {
 		display: inline-block;
 		margin-bottom: 1rem;
-		font-family: "IBM Plex Mono", monospace;
+		font-family: var(--font-mono);
 		font-size: 1rem;
 		font-weight: 400;
 		color: #ff6fe7;
 	}
 
 	#name {
-		font-family: "Inter", sans-serif;
+		font-family: var(--font-sans);
 		font-size: 2.5rem;
 		word-spacing: 0.1rem;
 		text-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.5);
@@ -99,7 +94,7 @@ const optimizedParker = await getImage({ src: parker });
 
 	#job-description {
 		color: #f3c6ac;
-		font-family: "Inter", sans-serif;
+		font-family: var(--font-sans);
 		font-size: 2.5rem;
 		word-spacing: 0.1rem;
 		text-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.5);
@@ -108,7 +103,7 @@ const optimizedParker = await getImage({ src: parker });
 	p {
 		max-width: 19rem;
 		margin-bottom: 2rem;
-		font-family: "Inter", sans-serif;
+		font-family: var(--font-sans);
 		font-size: 1.125rem;
 		line-height: 1.5;
 	}
@@ -117,7 +112,7 @@ const optimizedParker = await getImage({ src: parker });
 		display: inline-block;
 		padding: 0.75rem 1.5rem;
 		border: 0.1rem solid #ff6fe7;
-		font-family: "IBM Plex Mono", monospace;
+		font-family: var(--font-mono);
 		font-size: 1.125rem;
 		text-decoration: none;
 		color: #ff6fe7;
@@ -160,8 +155,6 @@ const optimizedParker = await getImage({ src: parker });
 
 		img {
 			min-width: calc(100% + 1px);
-			// max-width: 37%;
-			// max-height: 100%;
 			--m: conic-gradient(
 					from -135deg at right,
 					#0000,
